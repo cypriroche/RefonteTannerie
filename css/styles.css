@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* pour que le site prenne toute la largeur de la fenêtre */
+
+/* on donne les fonts aux titres et aux paragraphes  */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Trade Winds', cursive;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: #EA6B38;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    z-index: 1000;
+    /* z-index pour que le header reste au-dessus des autres éléments vu qu'il est en position fixe*/
+}
+
+/* ajout de padding au body pour compenser le header fixe */
+main {
+    padding-top: 120px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+/* taille du logo du header */
+.logo {
+    height: 52px;
+    width: auto;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #343330;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color : #EA6B38;
+}
+
+/* menu déroulant */
+.dropdown {
+    position: relative;
+}
+/* taille et marge pour la flèche qui indique le menu déroulant */
+.dropdown-arrow {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+
+/* menu déroulant avec un z-index pour qu'il reste au-dessus du reste (il est caché quand il n'y a pas de survol)*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* ombre pour donner du volume */
+    min-width: 200px;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* affichage du menu déroulant au survol */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+/* taille et marge pour les liens du menu déroulant */
+.dropdown-menu li a {
+    padding: 12px 20px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #343330;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* Footer */
+/* -------------------------------------------------------------------------------------------------------- */
+footer {
+    background-color: #ffffff;
+    color: #343330;
+    padding: 50px 0 0;
+    margin-top: 50px;
+}
+
+/* disposition du contenu du footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    gap: 30px;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    width: auto;
+}
+/* un menu simple pour le footer */
+.footer-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* disposition pour la liste du menu */
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 0;
+}
+
+
+.footer-menu ul li a {
+    color: #343330;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* changement de couleur au survol */
+.footer-menu ul li a:hover {
+    color: #EA6B38;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+/* liens pour les réseaux sociaux */
+.social-links a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* icones pour les réseaux sociaux */
+.social-links a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* scale au survol */
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* disposition pour les droits d'auteur */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #343330;
+}
