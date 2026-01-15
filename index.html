@@ -8,22 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>La tannerie</title>
+    <title>La Tannerie</title>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo-header">
-            <!-- LOGO cliquable qui retourne à l'accueil -->
             <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
         <nav>
-            <!-- nav qui affiche le menu -->
             <ul>
                 <li><a href="programmation.html">Programmation</a></li>
                 <li class="menu-deroulant">
                     <a href="tannerie.html">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
                     <ul class="menu-deroulant-menu">
-                        <!-- menu déroulant -->
                         <li><a href="structure.html">La structure</a></li>
                         <li><a href="rse.html">RSE</a></li>
                         <li><a href="actionsCulturelles.html">Actions culturelles</a></li>
@@ -34,20 +31,140 @@
             </ul>
         </nav>
     </header>
+
     <main>
+        <img class="banniere" src="images/banniere.webp" alt="Bannière">
+
+        <h1 class="titresAccueil">Programmation</h1>
+        <section class="listeCartesAccueil">
+            <article class="carteAccueil">
+                <div class="carteGaucheAccueil">
+                    <div class="conteneurVisuel">
+                        <img src="images/logo-tannerie.png" alt="Logo" class="logo">
+                        <img src="images/daftpunk.png" alt="Daft Punk" class="visuelArtiste">
+                        <h2 class="nomArtiste">Daft Punk</h2>
+                    </div>
+                    <ul class="infosCles">
+                        <li class="date">Mardi 9 novembre 2027</li>
+                        <li class="heure">20h30</li>
+                        <li class="genre">Electro</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="carteAccueil">
+                <div class="carteGaucheAccueil">
+                    <div class="conteneurVisuel">
+                        <img src="images/logo-tannerie.png" alt="Logo" class="logo">
+                        <img src="images/jul.png" alt="Jul" class="visuelArtiste">
+                        <h2 class="nomArtiste">Jul</h2>
+                    </div>
+                    <ul class="infosCles">
+                        <li class="date">Mardi 23 novembre 2027</li>
+                        <li class="heure">21h00</li>
+                        <li class="genre">Rap</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="carteAccueil">
+                <div class="carteGaucheAccueil">
+                    <div class="conteneurVisuel">
+                        <img src="images/logo-tannerie.png" alt="Logo" class="logo">
+                        <img src="images/david brownie.jpg" alt="David Brownie" class="visuelArtiste">
+                        <h2 class="nomArtiste">David Brownie</h2>
+                    </div>
+                    <ul class="infosCles">
+                        <li class="date">Samedi 12 février 2028</li>
+                        <li class="heure">21h00</li>
+                        <li class="genre">Rock</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <div class="boutonCentre">
+            <a href="programmation.html" class="boutonAccueil">Voir toute la programmation</a>
+        </div>
+
+        <div class="separateurGauche"></div>
+
+        <h1 class="titresAccueil">La Tannerie</h1>
+        <div class="tannerieAccueil">
+            <div class="articleTannerieGauche">
+                <img src="images/tannerieaccueil.jpg" alt="La Tannerie" class="imageTannerie">
+            </div>
+            <div class="articleTannerieDroite">
+                <p class="texteTannerie">
+                    La Tannerie est un lieu culturel emblématique, où la musique, l’art et la convivialité se rencontrent. Depuis sa création, cet espace unique accueille des concerts, des spectacles et des événements qui rassemblent un public passionné et curieux.
+                    <br><br>
+                    Chaque programmation est pensée pour offrir des expériences mémorables, mêlant artistes locaux et têtes d’affiche internationales. L’acoustique soigneusement étudiée, l’ambiance intimiste et l’architecture singulière de La Tannerie créent un cadre exceptionnel pour vivre la musique pleinement.
+                    <br><br>
+                    Que vous soyez amateur de rock, de pop, d’électro ou de jazz, chaque visite devient un moment de partage et de découverte. Plus qu’une simple salle de spectacle, La Tannerie est un véritable lieu de vie, de rencontre et d’échanges.
+                </p>
+                <div class="boutonCentre">
+                    <a href="tannerie.html" class="boutonAccueil">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="separateurDroite"></div>
+
+        <h1 class="titresAccueil">Nos services</h1>
+        <section class="listeServices">
+            <article class="carteService">
+                <img src="images/locationstudio.png" alt="Location de salle" class="imageService">
+                <h2 class="titreService">Location de salle</h2>
+                <p class="texteService">Une salle équipée pour concerts, spectacles et événements culturels.</p>
+            </article>
+            <article class="carteService">
+                <img src="images/accompagnement.png" alt="Bar & convivialité" class="imageService">
+                <h2 class="titreService">Bar & convivialité</h2>
+                <p class="texteService">Un espace bar chaleureux pour profiter avant et après les concerts.</p>
+            </article>
+            <article class="carteService">
+                <img src="images/mix.png" alt="Accompagnement artistes" class="imageService">
+                <h2 class="titreService">Accompagnement artistes</h2>
+                <p class="texteService">Résidences, répétitions et soutien à la création musicale.</p>
+            </article>
+        </section>
+        <div class="boutonCentre">
+            <a href="services.html" class="boutonAccueil">Plus d'informations</a>
+        </div>
+
+        <div class="separateurGauche"></div>
+
+        <h1 class="titresAccueil">Galerie</h1>
+        <section class="galerie">
+            <img src="images/galerie1.png" alt="Galerie 1">
+            <img src="images/galerie2.png" alt="Galerie 2">
+            <img src="images/galerie3.png" alt="Galerie 3">
+            <img src="images/galerie4.png" alt="Galerie 4">
+            <img src="images/galerie5.png" alt="Galerie 5">
+            <img src="images/galerie6.png" alt="Galerie 6">
+            <img src="images/galerie7.png" alt="Galerie 7">
+            <img src="images/galerie8.png" alt="Galerie 8">
+        </section>
+
+        <div class="separateurDroite"></div>
+
+        <h1 class="titresAccueil">Nos partenaires</h1>
+        <section class="partenaires">
+            <img src="images/partenaire1.png" alt="partenaire1">
+            <img src="images/partenaire2.png" alt="partenaire2">
+            <img src="images/partenaire3.png" alt="partenaire3">
+            <img src="images/partenaire4.png" alt="partenaire4">
+            <img src="images/partenaire5.png" alt="partenaire5">
+        </section>
 
     </main>
 
     <footer>
-        
         <div class="footer-container">
             <div class="logo-container">
-            <a href="index.html">
-                <img src="img/logo-tannerie.png" alt="Logo La tannerie Bourg en Bresse">
-            </a>
+                <a href="index.html">
+                    <img src="img/logo-tannerie.png" alt="Logo La Tannerie">
+                </a>
             </div>
-
-            <!-- menu footer -->
             <div class="footer-menu">
                 <ul>
                     <li><a href="programmation.html">Programmation</a></li>
@@ -56,8 +173,6 @@
                     <li><a href="nousTrouver.html">Nous trouver</a></li>
                 </ul>
             </div>
-            
-           <!-- icon résaux sociaux -->
             <div class="icones-reseaux">
                 <a href="https://www.facebook.com/latannerie" aria-label="Facebook">
                     <img src="img/icon/facebook-icon.png" alt="Facebook">
@@ -68,7 +183,7 @@
                 <a href="https://www.youtube.com/channel/UCxKtBCxXr0KrnHim09zdMuA" aria-label="Youtube">
                     <img src="img/icon/youtube-icon.png" alt="Youtube">
                 </a>
-                <a href="https://www.facebook.com/latannerie" aria-label="Tiktok">
+                <a href="https://www.tiktok.com/@latannerie" aria-label="Tiktok">
                     <img src="img/icon/tiktok-icon.png" alt="Tiktok">
                 </a>
                 <a href="https://www.instagram.com/latannerie01/" aria-label="Instagram">
@@ -76,8 +191,6 @@
                 </a>
             </div>
         </div>
-
-        <!-- informations sur les droits d'auteurs -->
         <div class="droit-d-auteurs">
             <p>© 2026 La Tannerie - Tous droits réservés</p>
         </div>
