@@ -1,3 +1,5 @@
+<?php
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -38,7 +40,7 @@
             <article class="carteEvenement">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logo">
+                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
                         <img src="images/daftpunk.png" alt="Daft Punk" class="visuelArtiste">
                         <h2 class="nomArtiste">Daft Punk</h2>
                     </div>
@@ -66,7 +68,7 @@
             <article class="carteEvenement inverse">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logo">
+                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
                         <img src="images/jul.png" alt="Jul" class="visuelArtiste">
                         <h2 class="nomArtiste">Jul</h2>
                     </div>
@@ -93,7 +95,7 @@
             <article class="carteEvenement">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logo">
+                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
                         <img src="images/david brownie.jpg" alt="David Brownie" class="visuelArtiste">
                         <h2 class="nomArtiste">David Brownie</h2>
                     </div>
@@ -120,7 +122,7 @@
             <article class="carteEvenement inverse">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logo">
+                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
                         <img src="images/taylorswift.png" alt="Taylor Swift" class="visuelArtiste">
                         <h2 class="nomArtiste">Taylor Swift</h2>
                     </div>
@@ -188,3 +190,6 @@
     </footer>
 </body>
 </html>
+
+
+?>
