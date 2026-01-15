@@ -1,0 +1,83 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  color: #343330;
+}
+
+/* structure de la page */
+.structure {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* bannière photo bénévoles */
+.banniere {
+  width: 100vw;
+  height: 500px;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.banniere img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+h1 {
+  font-family: 'Trade Winds', cursive;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #EA6B38;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+/* partie salariés */
+.centre {
+  text-align: center;
+}
+
+.salariés {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.personne {
+  width: 25%; /* 3 par ligne */
+  padding: 20px;
+}
+
+.personne img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.personne p {
+  margin: 4px 0; /* pour réduire l’espace entre les lignes */
+}
+
+/* les lienss */
+.section a {
+  color: #EA6B38;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
