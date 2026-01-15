@@ -1,5 +1,5 @@
 <?php
-
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styleprog.css">
+
     <title>Programmation</title>
 </head>
 <body>
@@ -19,7 +21,7 @@
         </a>
         <nav>
             <ul>
-                <li><a href="programmation.html">Programmation</a></li>
+                <li><a href="programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
                     <a href="tannerie.html">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
                     <ul class="menu-deroulant-menu">
@@ -40,8 +42,8 @@
             <article class="carteEvenement">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
-                        <img src="images/daftpunk.png" alt="Daft Punk" class="visuelArtiste">
+                        <img src="img/logo.png" alt="Logo" class="logoCarte">
+                        <img src="img/Programation/daftpunk.png" alt="Daft Punk" class="visuelArtiste">
                         <h2 class="nomArtiste">Daft Punk</h2>
                     </div>
                     <ul class="infosCles">
@@ -68,8 +70,8 @@
             <article class="carteEvenement inverse">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
-                        <img src="images/jul.png" alt="Jul" class="visuelArtiste">
+                        <img src="img/logo.png" alt="Logo" class="logoCarte">
+                        <img src="img/Programation/jul.png" alt="Jul" class="visuelArtiste">
                         <h2 class="nomArtiste">Jul</h2>
                     </div>
                     <ul class="infosCles">
@@ -95,8 +97,8 @@
             <article class="carteEvenement">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
-                        <img src="images/david brownie.jpg" alt="David Brownie" class="visuelArtiste">
+                        <img src="img/logo.png" alt="Logo" class="logoCarte">
+                        <img src="img/Programation/david brownie.jpg" alt="David Brownie" class="visuelArtiste">
                         <h2 class="nomArtiste">David Brownie</h2>
                     </div>
                     <ul class="infosCles">
@@ -122,8 +124,8 @@
             <article class="carteEvenement inverse">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
-                        <img src="images/logo-tannerie.png" alt="Logo" class="logoCarte">
-                        <img src="images/taylorswift.png" alt="Taylor Swift" class="visuelArtiste">
+                        <img src="img/logo.png" alt="Logo" class="logoCarte">
+                        <img src="img/Programation/taylorswift.png" alt="Taylor Swift" class="visuelArtiste">
                         <h2 class="nomArtiste">Taylor Swift</h2>
                     </div>
                     <ul class="infosCles">
@@ -155,12 +157,12 @@
         <div class="footer-container">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="img/logo-tannerie.png" alt="Logo La Tannerie">
+                    <img src="img/logo.png" alt="Logo La Tannerie">
                 </a>
             </div>
             <div class="footer-menu">
                 <ul>
-                    <li><a href="programmation.html">Programmation</a></li>
+                    <li><a href="programmation.php">Programmation</a></li>
                     <li><a href="tannerie.html">La Tannerie</a></li>
                     <li><a href="services.html">Nos services</a></li>
                     <li><a href="nousTrouver.html">Nous trouver</a></li>
@@ -192,4 +194,3 @@
 </html>
 
 
-?>

@@ -225,14 +225,14 @@ footer {
 }
 
 /* disposition pour les droits d'auteur */
-.droit-d-auteur {
+.droit-d-auteurs {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.droit-d-auteur p {
+.droit-d-auteurs p {
     font-size: 14px;
     color: #343330;
 }

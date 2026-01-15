@@ -1,24 +1,7 @@
 /*------------------------------------------------------------
 STYLES GÉNÉRAUX (Toute la Tannerie)
 ------------------------------------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: "Open Sans", sans-serif;
-    color: #343330;
-    line-height: 1.6;
-    background-color: #ffffff;
-}
-
-.conteneur {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 /*------------------------------------------------------------
 EN-TÊTE (NAVIGATION)
@@ -35,7 +18,7 @@ EN-TÊTE (NAVIGATION)
     list-style: none;
     display: flex;
     gap: 20px;
-}
+} 
 
 .en-tete-principale nav a {
     text-decoration: none;
