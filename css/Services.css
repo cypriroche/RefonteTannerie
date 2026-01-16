@@ -41,6 +41,14 @@
     width: 70%;
 }
 
+.titresAccueil {
+    font-family: "Trade Winds";
+    font-size: 3rem;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 5rem;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #FFFFFF;
