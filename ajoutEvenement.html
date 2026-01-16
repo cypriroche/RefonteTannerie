@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styleadmin.css">
+    <title>Admin</title>
+</head>
+
+<body>
+
+    <form action="lien" method="POST" class="formulaireEvenement">
+
+        <h1 class="titreFormulaire">Ajouter un événement</h1>
+
+        <label class="labelFormulaire" for="nomArtiste">Nom de l'artiste</label>
+        <input class="champFormulaire" type="text" id="nomArtiste" name="nomArtiste" required>
+
+        <label class="labelFormulaire" for="image">Image</label>
+        <input class="champFormulaire" type="file" id="image" name="image" accept="image/*" required>
+
+        <label class="labelFormulaire" for="date">Date</label>
+        <input class="champFormulaire" type="date" id="date" name="date" required>
+
+        <label class="labelFormulaire" for="heure">Heure</label>
+        <input class="champFormulaire" type="time" id="heure" name="heure" required>
+
+        <label class="labelFormulaire" for="ouverture">Ouverture des portes</label>
+        <input class="champFormulaire" type="time" id="ouverture" name="ouverture">
+
+        <label class="labelFormulaire" for="infos">Informations</label>
+        <textarea class="champFormulaire" id="infos" name="infos" rows="4"></textarea>
+
+        <label class="labelFormulaire" for="signature">Signature</label>
+        <input class="champFormulaire" type="text" id="signature" name="signature">
+
+        <label class="labelFormulaire" for="prix">Prix en € </label>
+        <input class="champFormulaire" type="number" id="prix" name="prix" required>
+
+        <button type="submit" class="boutonFormulaire">Ajouter l'événement</button>
+    </form>
+
+</body>
+
+</html>
