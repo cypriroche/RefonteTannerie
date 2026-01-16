@@ -86,7 +86,7 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    width: 40%;
+    width: 35%;
     font-size: 15px;
     font-weight: bold;
     display: block;
@@ -99,3 +99,11 @@
 
 /* Formulaire pour supprimer un événement */
 
+.optionsEvenement {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 15px;
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
