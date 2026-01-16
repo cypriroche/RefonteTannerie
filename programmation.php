@@ -1,4 +1,8 @@
 <?php
+include 'php/config.php';
+include 'php/poo/database.php';
+include 'php/poo/evenement.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,117 +43,51 @@
     <main>
         <section class="listeCartes">
 
-            <article class="carteEvenement">
+        <?php
+        // Connexion à la base de données 
+        $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+        // appel de la function de connexion
+        $connection = $db->getConnection();
+        
+        // requête pour récupérer les événements grâce à la function query dans database.php
+        $carteEvenements = $db->query("SELECT * FROM evenement");
+
+        // index pour alterner les cartes
+        $index = 0;
+        foreach ($carteEvenements as $carteEvenement) :
+            // Savoir si la carte est inversé
+               $isInverse = ($index % 2 === 1);?>
+
+            <!--  On rajoute la classe "inverse" quand la carte doit être inversée -->
+            <article class="carteEvenement<?= $isInverse ? ' inverse' : '' ?>">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
                         <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/daftpunk.png" alt="Daft Punk" class="visuelArtiste">
-                        <h2 class="nomArtiste">Daft Punk</h2>
+                        <!-- Affichage dynamique des éléments de la carte -->
+                        <img src="<?php echo $carteEvenement['visuel']; ?>" alt="<?php echo $carteEvenement['artiste']; ?>" class="visuelArtiste">
+                        <h2 class="nomArtiste"><?php echo $carteEvenement['artiste']; ?></h2>
                     </div>
                     <ul class="infosCles">
-                        <li class="date">Mardi 9 novembre 2027</li>
-                        <li class="heure">20h30</li>
-                        <li class="genre">Electro</li>
+                        <li class="date"><?php echo $carteEvenement['date_evenement']; ?></li>
+                        <li class="heure"><?php echo $carteEvenement['heure_evenement']; ?></li>
+                        <li class="genre"><?php echo $carteEvenement['style']; ?></li>
                     </ul>
                 </div>
                 <div class="carteDroite">
-                    <p class="ouverture">Ouverture des portes à 19h30</p>
+                    <p class="ouverture">Ouverture des portes à <?php echo $carteEvenement['heure_ouverture']; ?></p>
                     <div class="description">
                         <p>
-                            Les Daft Punk reviennent pour un concert exceptionnel à l’occasion de la réouverture de La Tannerie.
-                            Un événement historique, unique, et déjà mythique. Pionniers absolus de la French Touch, Thomas Bangalter et Guy-Manuel de Homem-Christo ont redéfini la musique électronique mondiale. De Homework à Discovery, de Human After All à Random Access Memories, Daft Punk a traversé les générations en mêlant house, disco, funk et pop futuriste, tout en construisant un univers visuel et sonore devenu culte. Après des années de silence et une séparation annoncée, leur retour sur scène marque un moment rare, presque irréel. Pour célébrer la renaissance de La Tannerie, le duo choisit Bourg-en-Bresse comme berceau d’un concert unique. C’est une célébration de la musique électronique, de la scène live et du lien indéfectible entre un public et un groupe légendaire. Une nuit hors du temps.
+                            <?php echo $carteEvenement['informations']; ?>
                         </p>
                         <p class="signature">
-                            Daft Punk. One night only. À La Tannerie.
+                            <?php echo $carteEvenement['signature']; ?>
                         </p>
                     </div>
-                    <div class="prix">999€</div>
+                    <div class="prix"><?php echo $carteEvenement['tarif_plein']. " €"; ?></div>
                 </div>
             </article>
-
-            <article class="carteEvenement inverse">
-                <div class="carteGauche">
-                    <div class="conteneurVisuel">
-                        <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/jul.png" alt="Jul" class="visuelArtiste">
-                        <h2 class="nomArtiste">Jul</h2>
-                    </div>
-                    <ul class="infosCles">
-                        <li class="date">Mardi 23 novembre 2027</li>
-                        <li class="heure">21h00</li>
-                        <li class="genre">Rap</li>
-                    </ul>
-                </div>
-                <div class="carteDroite">
-                    <p class="ouverture">Ouverture des portes à 20h00</p>
-                    <div class="description">
-                        <p>
-                            Jul propose un concert symbolique à 1 €, un événement exceptionnel mêlant musique et engagement écologique. Artiste majeur du rap français, Jul a construit une carrière unique, indépendante et populaire, rassemblant un public fidèle bien au-delà des codes traditionnels. Ses concerts sont des moments de communion, portés par une énergie brute et une proximité rare avec son public. Pour cette date unique, Jul choisit de soutenir une cause qui lui tient à cœur : la protection de l’environnement. Un tarif volontairement symbolique, pour rappeler que l’écologie concerne tout le monde et que la culture peut aussi être un levier de sensibilisation. Les bénéfices du concert seront reversés à des projets écologiques locaux.
-                        </p>
-                        <p class="signature">
-                            Un concert accessible, fédérateur et engagé, à l’image d’un artiste qui n’a jamais cessé de suivre sa propre voie.
-                        </p>
-                    </div>
-                    <div class="prix">1€</div>
-                </div>
-            </article>
-
-            <article class="carteEvenement">
-                <div class="carteGauche">
-                    <div class="conteneurVisuel">
-                        <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/david brownie.jpg" alt="David Brownie" class="visuelArtiste">
-                        <h2 class="nomArtiste">David Brownie</h2>
-                    </div>
-                    <ul class="infosCles">
-                        <li class="date">Samedi 12 février 2028</li>
-                        <li class="heure">21h00</li>
-                        <li class="genre">Rock</li>
-                    </ul>
-                </div>
-                <div class="carteDroite">
-                    <p class="ouverture">Ouverture des portes à 20h00</p>
-                    <div class="description">
-                        <p>
-                            David Brownie annonce un concert exceptionnel, un rendez-vous unique où musique et émotion se rencontrent. Artiste incontournable de la scène musicale contemporaine, David Brownie a su créer un univers singulier, mêlant mélodies puissantes et textes intimes, touchant un public large et fidèle. Ses concerts sont des expériences vibrantes, où l’énergie et la proximité avec les spectateurs créent une communion rare et inoubliable. Pour cette date exceptionnelle, David Brownie souhaite partager bien plus qu’un simple spectacle : un moment de solidarité et de partage. En choisissant un tarif accessible, il rappelle que la musique est un langage universel, capable de rassembler et d’inspirer chacun. Les bénéfices de cette soirée seront partiellement reversés à des initiatives locales soutenant la culture et l’éducation musicale.
-                        </p>
-                        <p class="signature">
-                            Un concert unique, chaleureux et engagé, à l’image d’un artiste qui suit toujours son propre chemin, fidèle à ses valeurs et à son public.
-                        </p>
-                    </div>
-                    <div class="prix">35€</div>
-                </div>
-            </article>
-
-            <article class="carteEvenement inverse">
-                <div class="carteGauche">
-                    <div class="conteneurVisuel">
-                        <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/taylorswift.png" alt="Taylor Swift" class="visuelArtiste">
-                        <h2 class="nomArtiste">Taylor Swift</h2>
-                    </div>
-                    <ul class="infosCles">
-                        <li class="date">Mardi 21 mars 2028</li>
-                        <li class="heure">20h30</li>
-                        <li class="genre">Pop</li>
-                    </ul>
-                </div>
-                <div class="carteDroite">
-                    <p class="ouverture">Ouverture des portes à 19h30</p>
-                    <div class="description">
-                        <p>
-                            Taylor Swift présente un concert exceptionnel, un événement unique où musique et émotions se rencontrent. Icône mondiale de la pop et de la country, Taylor Swift a construit une carrière phénoménale, portée par des textes sincères et des mélodies inoubliables. Ses concerts sont de véritables expériences immersives, où la magie de la scène et la proximité avec le public créent des moments de partage intenses. Pour cette date exceptionnelle, Taylor Swift souhaite offrir bien plus qu’un simple spectacle. Avec un tarif accessible et une énergie généreuse, elle rappelle que la musique est un langage universel, capable de rassembler et d’inspirer chacun. Une partie des bénéfices sera reversée à des initiatives soutenant l’éducation musicale et l’accès à la culture pour tous.
-                        </p>
-                        <p class="signature">
-                            Un concert unique, émouvant et fédérateur, fidèle à l’artiste engagée et visionnaire que le public adore.
-                        </p>
-                    </div>
-                    <div class="prix">65€</div>
-                </div>
-            </article>
-
-            <!-- Les autres articles suivent exactement le même modèle -->
-
+            <?php $index++; ?>
+        <?php endforeach; ?>
         </section>
     </main>
 

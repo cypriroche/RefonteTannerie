@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/RSE.css">
     <title>RSE - La Tannerie</title>
 </head>
 
@@ -53,7 +54,7 @@
                     <div class="Description-action">
                         <p>Pour éviter les bouteilles en plastique et le gaspillage d'eau, nous fournissons des gourdes
                             aux artistes accueillis, complétées par des fontaines à eau en loges.</p>
-                        <img src="images/Photos site/RSE/Gourde-artiste.png" alt="Gourde pour les artistes">
+                        <img src="img/laTannerie/rse/Gourde-artiste.png" alt="Gourde pour les artistes">
                     </div>
                 </details>
 
@@ -65,7 +66,7 @@
                     <div class="Description-action">
                         <p>En partenariat avec TchaoMégot, nous collectons les mégots sur notre terrasse pour qu'ils
                             soient recyclés en isolant thermique sans utilisation d'eau ni de produits chimiques.</p>
-                        <img src="images/Photos site/La Tannerie/Gestion-des-mégots.png"
+                        <img src="img/laTannerie/rse/Gestion-des-megots.png"
                             alt="Collecte et recyclage des mégots">
                     </div>
                 </details>
@@ -78,7 +79,7 @@
                     <div class="Description-action">
                         <p>Nous avons choisi Popee pour nos sanitaires : un papier toilette français, recyclé et sans
                             produits toxiques, pour un impact environnemental réduit.</p>
-                        <img src="images/Photos site/La Tannerie/Papier toilette.png" alt="Papier toilette Popee">
+                        <img src="img/laTannerie/rse/papierToilette.png" alt="Papier toilette Popee">
                     </div>
                 </details>
 
@@ -143,7 +144,7 @@
         <section class="explicationRSE">
             <div class="conteneur">
                 <h2 class="titre">La RSE, qu’est ce que c’est ?</h2>
-                <img src="images/Photos site/RSE/TannerieRSE.png" alt="RSE Tannerie">
+                <img src="img/laTannerie/rse/TannerieRSE.png" alt="RSE Tannerie">
                 <p>La responsabilité sociétale des entreprises (RSE) est l'intégration volontaire des préoccupations
                     sociales et environnementales à nos activités. Pour La Tannerie, il s'agit de chercher un impact
                     positif sur la société tout en restant économiquement viable.</p>
@@ -158,7 +159,7 @@
                     continue avec nos partenaires, fournisseurs et publics.</p>
             </div>
             <div class="image">
-                <img src="images/Photos site/RSE/ISO-20121.png" alt="Norme ISO 20121">
+                <img src="img/laTannerie/rse/ISO-20121.png" alt="Norme ISO 20121">
             </div>
         </section>
 
@@ -203,7 +204,7 @@
 
         <div class="footer-container">
             <div class="logo-container">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="img/logo-tannerie.png" alt="Logo La tannerie Bourg en Bresse">
                 </a>
             </div>
@@ -212,9 +213,9 @@
             <div class="footer-menu">
                 <ul>
                     <li><a href="programmation.php">Programmation</a></li>
-                    <li><a href="tannerie.html">La Tannerie</a></li>
-                    <li><a href="services.html">Nos services</a></li>
-                    <li><a href="nousTrouver.html">Nous trouver</a></li>
+                    <li><a href="tannerie.php">La Tannerie</a></li>
+                    <li><a href="services.php">Nos services</a></li>
+                    <li><a href="nousTrouver.php">Nous trouver</a></li>
                 </ul>
             </div>
 

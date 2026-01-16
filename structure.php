@@ -79,8 +79,11 @@ include 'php/poo/Membre.php';
       <p>
         <strong>Membres du CA 23/24 :</strong>
         <?php
+        // connexion à la base de données
         $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
         $connection = $db->getConnection();
+
+        // requête pour récupérer les membres du CA par la fonction query dans database.php
         $ca_Membres = $db->query("SELECT role, nom_membre, prenom_membre FROM membres WHERE type = 'CA' ORDER BY role IS NULL, role, nom_membre;");
         foreach ($ca_Membres as $ca_Membre) {
             echo $ca_Membre['prenom_membre'] . " " . $ca_Membre['nom_membre'] . " (" . $ca_Membre['role'] . ") / ";
@@ -97,9 +100,13 @@ include 'php/poo/Membre.php';
 
             
 <?php       
+            // connexion à la base de données
             $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
             $connection = $db->getConnection();
+
+            // requête pour récupérer les salariés par la fonction query dans database.php
             $salaries = $db->query("SELECT * FROM membres WHERE type = 'Salarie' ORDER BY role IS NULL, role, nom_membre;");
+            // boucle pour afficher les salariés
             foreach ($salaries as $salarie) :
                 ?><div class="personne">
                 <img src="<?php echo $salarie['image_membre'] ?>" alt="<?php echo $salarie['prenom_membre'] ?>">
