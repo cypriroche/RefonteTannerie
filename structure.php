@@ -45,10 +45,10 @@ include 'php/poo/Membre.php';
     
     <main class="structure">
 
- <!-- photobannière -->
-    <div class="banniere">
-      <img src="img/structure/benevoles.webp" alt="bénévoles">
-    </div>
+ <section class="section-bannière">
+      <h1>L’association</h1>
+        <img src="img/structure/benevoles.webp" alt="bannière">
+    </section>
 
     <!-- partie sur l'association -->
     <section class="section">
@@ -64,7 +64,7 @@ include 'php/poo/Membre.php';
 
     <!-- partie sur les bénévoles -->
     <section class="section">
-      <h2>Les bénévoles</h2>
+      <h1>Les bénévoles</h1>
 
       <p>
         Être bénévole pour La Truffe et les Oreilles, c’est participer
@@ -80,11 +80,8 @@ include 'php/poo/Membre.php';
       <p>
         <strong>Membres du CA 23/24 :</strong>
         <?php
-        // connexion à la base de données
         $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
         $connection = $db->getConnection();
-
-        // requête pour récupérer les membres du CA par la fonction query dans database.php
         $ca_Membres = $db->query("SELECT role, nom_membre, prenom_membre FROM membres WHERE type = 'CA' ORDER BY role IS NULL, role, nom_membre;");
         foreach ($ca_Membres as $ca_Membre) {
             echo $ca_Membre['prenom_membre'] . " " . $ca_Membre['nom_membre'] . " (" . $ca_Membre['role'] . ") / ";
@@ -93,21 +90,20 @@ include 'php/poo/Membre.php';
       </p>
     </section>
 
+    <div class="separateur-droite"></div>
+
+
     <!-- partie salariés -->
     <section class="section centre">
-        <h2>Les salariés</h2>   
+        <h1>Les salariés</h1>   
         
         <div class="salariés">
 
             
 <?php       
-            // connexion à la base de données
             $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
             $connection = $db->getConnection();
-
-            // requête pour récupérer les salariés par la fonction query dans database.php
             $salaries = $db->query("SELECT * FROM membres WHERE type = 'Salarie' ORDER BY role IS NULL, role, nom_membre;");
-            // boucle pour afficher les salariés
             foreach ($salaries as $salarie) :
                 ?><div class="personne">
                 <img src="<?php echo $salarie['image_membre'] ?>" alt="<?php echo $salarie['prenom_membre'] ?>">
@@ -122,9 +118,12 @@ include 'php/poo/Membre.php';
         </div>
     </section>
 
+    <div class="separateur-gauche"></div>
+
+
     <!-- règlement -->
     <section class="section">
-      <h2>Le règlement</h2>
+      <h1>Le règlement</h1>
       <p>
         L’association La Truffe et les Oreilles fonctionne grâce
         à l’implication de ses bénévoles, salariés et membres.
