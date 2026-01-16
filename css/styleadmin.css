@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+/*Style page de redirection vers les actions admin*/
+
+.actionsAdmin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  gap: 25px;
+}
+
+.actionBouton {
+  width: 350px;
+  padding: 18px 24px;
+  font-size: 20px;
+  border-radius: 40px;
+  background-color: #EA6B38;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionsAdmin a {
+  text-decoration: none;
+}
+
+
+.actionBouton::after {
+  content: "→";
+  font-size: 25px;
+}
+
+.boutonRetour {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #EA6B38;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boutonRetour:hover {
+    background-color: #EA6B38;
+}
+
+
+/* Formulaire pour ajouter un événement */
+
+.formulaireEvenement {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titreFormulaire {
+  font-family: "Trade Winds";
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.labelFormulaire {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Open Sans";
+  font-weight: 800;
+  color: #000000;
+}
+
+.champFormulaire {
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+
+.boutonFormulaire {
+  font-family: "Open Sans";
+    background-color: #EA6B38;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 35%;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.boutonFormulaire:hover {
+    background-color: #484444;
+}
+
+/* Formulaire pour supprimer un événement */
+
+.optionsEvenement {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 15px;
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
