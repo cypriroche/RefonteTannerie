@@ -16,22 +16,22 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo-header">
+        <a href="index.php" class="logo-header">
             <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
         <nav>
             <ul>
                 <li><a href="programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
-                    <a href="tannerie.html">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
+                    <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
                     <ul class="menu-deroulant-menu">
-                        <li><a href="structure.html">La structure</a></li>
-                        <li><a href="rse.html">RSE</a></li>
-                        <li><a href="actionsCulturelles.html">Actions culturelles</a></li>
+                        <li><a href="structure.php">La structure</a></li>
+                        <li><a href="rse.php">RSE</a></li>
+                        <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
                     </ul>
                 </li>
-                <li><a href="services.html">Nos services</a></li>
-                <li><a href="nousTrouver.html">Nous trouver</a></li>
+                <li><a href="services.php">Nos services</a></li>
+                <li><a href="nousTrouver.php">Nous trouver</a></li>
             </ul>
         </nav>
     </header>
@@ -156,16 +156,16 @@
     <footer>
         <div class="footer-container">
             <div class="logo-container">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="img/logo.png" alt="Logo La Tannerie">
                 </a>
             </div>
             <div class="footer-menu">
                 <ul>
                     <li><a href="programmation.php">Programmation</a></li>
-                    <li><a href="tannerie.html">La Tannerie</a></li>
-                    <li><a href="services.html">Nos services</a></li>
-                    <li><a href="nousTrouver.html">Nous trouver</a></li>
+                    <li><a href="tannerie.php">La Tannerie</a></li>
+                    <li><a href="services.php">Nos services</a></li>
+                    <li><a href="nousTrouver.php">Nous trouver</a></li>
                 </ul>
             </div>
             <div class="icones-reseaux">

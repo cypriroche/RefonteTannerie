@@ -32,3 +32,4 @@ class Salarie extends Membre {
 
 }
 
+?>

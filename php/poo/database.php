@@ -32,6 +32,14 @@ class Database {
         return $this->conn;
     }
 
-}
+	public function query(string $sql) {
+		$resultat = $this->conn->prepare($sql);
+		$resultat->execute();
+		$data = $resultat->fetchAll(PDO::FETCH_ASSOC);
+				return $data;
+		$resultat->closeCursor();
+	}
 
+}
+	
 ?>
