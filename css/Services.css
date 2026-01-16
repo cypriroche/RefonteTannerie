@@ -68,16 +68,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-.intro {
-  margin-bottom: 80px;
-}
-
 .service {
   margin-bottom: 80px;
-}
-
-.service p {
-  margin-bottom: 16px;
 }
 
 .service ul {
@@ -98,12 +90,11 @@ h2 {
   border: none;
 }
 
-.service a {
+a {
   color: #EA6B38; 
   text-decoration: none;
 }
 
-.service a:hover {
+a:hover {
   text-decoration: underline;
 }
-
