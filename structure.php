@@ -38,6 +38,7 @@ include 'php/poo/Membre.php';
                 </li>
                 <li><a href="services.php">Nos services</a></li>
                 <li><a href="nousTrouver.php">Nous trouver</a></li>
+                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
             </ul>
         </nav>
     </header>

@@ -76,6 +76,9 @@ nav ul li a {
 nav ul li a:hover {
     color : #EA6B38;
 }
+ 
+
+
 
 /* menu déroulant */
 .menu-deroulant {
@@ -123,8 +126,6 @@ nav ul li a:hover {
     background-color: #343330;
     color: #ffffff;
 }
-
-
 
 
 
@@ -235,4 +236,10 @@ footer {
 .droit-d-auteurs p {
     font-size: 14px;
     color: #343330;
+}
+
+.nav-user img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
 }

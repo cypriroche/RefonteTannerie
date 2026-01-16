@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo-header">
+        <a href="index.php" class="logo-header">
           <!-- LOGO cliquable qui retourne à l'accueil -->
           <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
@@ -21,16 +21,17 @@
             <ul>
                 <li><a href="programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
-                  <a href="tannerie.html">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
+                  <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
                   <ul class="menu-deroulant-menu">
                         <!-- menu déroulant -->
-                        <li><a href="structure.html">La structure</a></li>
-                        <li><a href="rse.html">RSE</a></li>
-                        <li><a href="actionsCulturelles.html">Actions culturelles</a></li>
+                        <li><a href="structure.php">La structure</a></li>
+                        <li><a href="rse.php">RSE</a></li>
+                        <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
                     </ul>
                 </li>
-                <li><a href="services.html">Nos services</a></li>
-                <li><a href="nousTrouver.html">Nous trouver</a></li>
+                <li><a href="services.php">Nos services</a></li>
+                <li><a href="nousTrouver.php">Nous trouver</a></li>
+                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
             </ul>
         </nav>
     </header>
@@ -163,7 +164,7 @@
         
         <div class="footer-container">
             <div class="logo-container">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="img/logo-tannerie.png" alt="Logo La tannerie Bourg en Bresse">
             </a>
             </div>
@@ -172,9 +173,9 @@
             <div class="footer-menu">
                 <ul>
                     <li><a href="programmation.php">Programmation</a></li>
-                    <li><a href="tannerie.html">La Tannerie</a></li>
-                    <li><a href="services.html">Nos services</a></li>
-                    <li><a href="nousTrouver.html">Nous trouver</a></li>
+                    <li><a href="tannerie.php">La Tannerie</a></li>
+                    <li><a href="services.php">Nos services</a></li>
+                    <li><a href="nousTrouver.php">Nous trouver</a></li>
                 </ul>
             </div>
             

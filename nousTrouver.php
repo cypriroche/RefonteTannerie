@@ -32,6 +32,7 @@
                 </li>
                 <li><a href="services.php">Nos services</a></li>
                 <li><a href="nousTrouver.php">Nous trouver</a></li>
+                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
             </ul>
         </nav>
     </header>
@@ -46,19 +47,19 @@
       </section>
       <h1 class="titresAccueil">Contact</h1>
       <p class="contact-symbole">
-        <img src="./img/telephone.webp" alt="Téléphone">
+        <img src="img/icon/telephone.webp" alt="Téléphone">
         04 74 21 04 55
       </p>
 
       <p class="contact-symbole">
-        <img src="./img/email.png" alt="Email">
+        <img src="img/icon/email.png" alt="Email">
         <a href="mailto:repetitions@la-tannerie.com">
           repetitions@la-tannerie.com
         </a>
       </p>
 
       <p class="contact-symbole">
-        <img src="./img/localisation.png" alt="Localisation">
+        <img src="img/icon/localisation.png" alt="Localisation">
         123 Place de la Vinaigrerie, 01000 Bourg en Bresse
       </p>
 

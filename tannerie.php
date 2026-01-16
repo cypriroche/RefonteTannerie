@@ -37,6 +37,7 @@
                 </li>
                 <li><a href="services.php">Nos services</a></li>
                 <li><a href="nousTrouver.php">Nous trouver</a></li>
+                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
             </ul>
         </nav>
     </header>
@@ -49,7 +50,7 @@
         <h1 class="titre-rse-accueil">RSE</h1>
         <section class="liste-actions-rse">
             <article class="carte-action-rse">
-                <a href="page-megots.html" class="lien-action-rse">
+                <a href="page-megots.php" class="lien-action-rse">
                     <img src="img/La Tannerie/Gestion-des-mégots.png" alt="Gestion des mégots"
                         class="image-action-rse">
                     <h2 class="titre-action-rse">Gestion des mégots</h2>
@@ -61,7 +62,7 @@
             </article>
 
             <article class="carte-action-rse">
-                <a href="page-verres.html" class="lien-action-rse">
+                <a href="page-verres.php" class="lien-action-rse">
                     <img src="img/La Tannerie/Gobelets-consignés.png" alt="Verres consignés"
                         class="image-action-rse">
                     <h2 class="titre-action-rse">Verres consignés</h2>
@@ -73,7 +74,7 @@
             </article>
 
             <article class="carte-action-rse">
-                <a href="page-toilette.html" class="lien-action-rse">
+                <a href="page-toilette.php" class="lien-action-rse">
                     <img src="img/La Tannerie/Papier toilette.png" alt="Papier toilette"
                         class="image-action-rse">
                     <h2 class="titre-action-rse">Papier toilette</h2>
@@ -85,7 +86,7 @@
         </section>
 
         <div class="conteneur-bouton-rse">
-            <a href="Les actions RSE.html" class="bouton-rse">En savoir plus</a>
+            <a href="Les actions RSE.php" class="bouton-rse">En savoir plus</a>
         </div>
 
         <div class="separateur-droite"></div>
