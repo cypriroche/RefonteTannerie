@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="index.php" class="logo-header">
+        <a href="index.html" class="logo-header">
           <!-- LOGO cliquable qui retourne à l'accueil -->
           <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
@@ -21,16 +21,16 @@
             <ul>
                 <li><a href="programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
-                  <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
+                  <a href="tannerie.html">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
                   <ul class="menu-deroulant-menu">
                         <!-- menu déroulant -->
-                        <li><a href="structure.php">La structure</a></li>
-                        <li><a href="rse.php">RSE</a></li>
-                        <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
+                        <li><a href="structure.html">La structure</a></li>
+                        <li><a href="rse.html">RSE</a></li>
+                        <li><a href="actionsCulturelles.html">Actions culturelles</a></li>
                     </ul>
                 </li>
-                <li><a href="services.php">Nos services</a></li>
-                <li><a href="nousTrouver.php">Nous trouver</a></li>
+                <li><a href="services.html">Nos services</a></li>
+                <li><a href="nousTrouver.html">Nous trouver</a></li>
             </ul>
         </nav>
     </header>
@@ -38,17 +38,20 @@
     <main class="container">
 
   <!-- introduction du haut de page -->
-  <section class="intro">
+  <section class="section-bannière">
     <h1>Nos services</h1>
+      <img src="img/Nos services/banniere.webp" alt="bannière">
+  </section>
+
     <p>
       Des espaces, des accompagnements et des ressources pour soutenir les pratiques musicales,
       quel que soit votre niveau ou votre style.
     </p>
-  </section>
 
   <!--locaux de répétitionss -->
   <section class="service">
-    <h2>Les locaux de répétitions</h2>
+    <h1 class="titresAccueil">Les locaux de répétitions</h1>
+
 
     <p><strong>Réservation uniquement par mail et 24h à l’avance :</strong>
       <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
@@ -68,7 +71,7 @@
       Le bureau MAO ne sera pas accessible durant la période des travaux.
     </p>
 
-    <h3>Tarifs</h3>
+    <h2>Tarifs</h2>
     <ul>
       <li>Local vide – 1h : 6€ / 20h : 90€</li>
       <li>Local + 1 équipement : 7€/h (110€ / 20h)</li>
@@ -92,10 +95,12 @@
     </p>
   </section>
 
+    <div class="separateur-droite"></div>
+
   <!-- capsules mao -->
   <section class="service">
-    <h2>Les capsules MAO</h2>
-
+    <h1 class="titresAccueil">Les capsules MAO</h1>
+    
     <p>
       Accompagnement à la pratique du studio (Musique Assistée par Ordinateur). 
        Sessions individuelles d’une heure avec un technicien.
@@ -119,9 +124,12 @@
     </p>
   </section>
 
+   <div class="separateur-gauche"></div>
+
+
   <!--accompagnement -->
   <section class="service">
-    <h2>Accompagnement</h2>
+    <h1 class="titresAccueil">Accompagnement</h1>
     <p>
       Sessions ponctuelles sur demande : diagnostic, accompagnement artistique,
       en local de répétition ou sur scène.
@@ -132,9 +140,11 @@
     </p>
   </section>
 
+    <div class="separateur-droite"></div>
+
   <!-- les trufferies -->
   <section class="service">
-    <h2>Trufferies 2025</h2>
+    <h1 class="titresAccueil">Trufferies 2025</h1>
 
     <p>
       Découvrez les portraits-interviews des lauréat·es des Trufferies 2025 :
@@ -153,8 +163,8 @@
         
         <div class="footer-container">
             <div class="logo-container">
-            <a href="index.php">
-              <img src="img/logo-tannerie.png" alt="Logo La tannerie Bourg en Bresse">
+            <a href="index.html">
+                <img src="img/logo-tannerie.png" alt="Logo La tannerie Bourg en Bresse">
             </a>
             </div>
 
@@ -162,9 +172,9 @@
             <div class="footer-menu">
                 <ul>
                     <li><a href="programmation.php">Programmation</a></li>
-                    <li><a href="tannerie.php">La Tannerie</a></li>
-                    <li><a href="services.php">Nos services</a></li>
-                    <li><a href="nousTrouver.php">Nous trouver</a></li>
+                    <li><a href="tannerie.html">La Tannerie</a></li>
+                    <li><a href="services.html">Nos services</a></li>
+                    <li><a href="nousTrouver.html">Nous trouver</a></li>
                 </ul>
             </div>
             
@@ -195,3 +205,4 @@
     </footer>
 </body>
 </html>
+
