@@ -35,43 +35,49 @@
             </ul>
         </nav>
     </header>
-    <main class="container">
-        <!-- contact -->
 
-        <section class="contact">
+  <main class="container">
+    <!-- contact -->
+
+    <section class="contact">
+      <section class="section-bannière">
         <h1>Nous trouver</h1>
-        <h2>Contact</h2>
-        <p class="contact-symbole">
-            <img src="img/icon/telephone.webp" alt="Téléphone">
-            04 74 21 04 55
-        </p>
+          <img src="img/nousTrouver/banniere.webp" alt="bannière">
+      </section>
+      <h1 class="titresAccueil">Contact</h1>
+      <p class="contact-symbole">
+        <img src="./img/telephone.webp" alt="Téléphone">
+        04 74 21 04 55
+      </p>
 
-        <p class="contact-symbole">
-            <img src="img/icon/email.png" alt="Email">
-            <a href="mailto:repetitions@la-tannerie.com">
-            repetitions@la-tannerie.com
-            </a>
-        </p>
+      <p class="contact-symbole">
+        <img src="./img/email.png" alt="Email">
+        <a href="mailto:repetitions@la-tannerie.com">
+          repetitions@la-tannerie.com
+        </a>
+      </p>
 
-        <p class="contact-symbole">
-            <img src="img/icon/localisation.png" alt="Localisation">
-            123 Place de la Vinaigrerie, 01000 Bourg en Bresse
-        </p>
+      <p class="contact-symbole">
+        <img src="./img/localisation.png" alt="Localisation">
+        123 Place de la Vinaigrerie, 01000 Bourg en Bresse
+      </p>
 
-        <!-- carte-->
-        <div class="contact-map">
-            <iframe
-            class="map"
-            src="https://www.google.com/maps?q=123%20Place%20de%20la%20Vinaigrerie%2001000%20Bourg-en-Bresse&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-        </section>
-        
-  <!-- section points de vente -->
+    <!-- carte-->
+      <div class="contact-map">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps?q=123%20Place%20de%20la%20Vinaigrerie%2001000%20Bourg-en-Bresse&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <div class="separateur-droite"></div>
+
+    <!-- section points de vente -->
     <section class="points-vente">
-      <h2>Points de vente</h2>
+      <h1 class="titresAccueil">Points de vente</h1>
       <p>
         Au VSK sur place (13 rue Victor & Hélène Basch, 01000 Bourg-en-Bresse) ou sur notre billetterie en ligne (+0,50€) SoTicket<br>
         Bourg-en-Bresse Destinations : Office de tourisme (+1.10€)<br>
@@ -81,8 +87,10 @@
       </p>
     </section>
 
+    <div class="separateur-gauche"></div>
+
     <section class="contact-membres">
-      <h2>Contact membres</h2>
+      <h1 class="titresAccueil">Contact membres</h1>
       <ul>
         <li>
           <strong>Directeur :</strong> 
