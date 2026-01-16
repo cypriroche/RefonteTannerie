@@ -55,21 +55,17 @@ body {
   padding: 50px 20px; /* espace intérieur */
 }
 
-h1 {
-  font-family: 'Trade Winds', cursive;
-  font-size: 3rem;
-  margin-bottom: 30px;
+.section-bannière,
+.separateur-gauche,
+.separateur-droite {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 h2 {
   font-size: 1.6rem;
   color: #EA6B38;
   margin-bottom: 20px;
-}
-
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .intro {
