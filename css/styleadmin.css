@@ -1,0 +1,36 @@
+/*Style page de redirection vers les actions admin*/
+
+.actionsAdmin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  gap: 25px;
+}
+
+.actionBouton {
+  width: 350px;
+  padding: 18px 24px;
+  font-size: 20px;
+  border-radius: 40px;
+  background-color: #e07a4f;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionsAdmin a {
+  text-decoration: none;
+}
+
+
+.actionBouton::after {
+  content: "→";
+  font-size: 25px;
+}
