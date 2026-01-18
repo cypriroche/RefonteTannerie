@@ -13,28 +13,46 @@
     <title>La Tannerie</title>
 </head>
 <body>
-    <header>
-        <a href="index.php" class="logo-header">
-            <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="programmation.php">Programmation</a></li>
-                <li class="menu-deroulant">
-                    <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
-                    <ul class="menu-deroulant-menu">
-                        <li><a href="structure.php">La structure</a></li>
-                        <li><a href="rse.php">RSE</a></li>
-                        <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
-                    </ul>
-                </li>
-                <li><a href="services.php">Nos services</a></li>
-                <li><a href="nousTrouver.php">Nous trouver</a></li>
-                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <a href="index.php" class="logo-header">
+        <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
+    </a>
 
+    <nav id="menuPrincipal">
+        <ul>
+            <li><a href="programmation.php">Programmation</a></li>
+
+            <li class="menu-deroulant">
+                <a href="tannerie.php">
+                    La Tannerie <span class="menu-deroulant-arrow">▼</span>
+                </a>
+                <ul class="menu-deroulant-menu">
+                    <li><a href="structure.php">La structure</a></li>
+                    <li><a href="rse.php">RSE</a></li>
+                    <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
+                </ul>
+            </li>
+
+            <li><a href="services.php">Nos services</a></li>
+            <li><a href="nousTrouver.php">Nous trouver</a></li>
+
+            <li class="nav-user">
+                <a href="connexionUtilisateur/connexion.php" aria-label="Connexion">
+                    <img src="img/icon/user.png" alt="Connexion">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <button id="burger" class="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<script src="js/menu.js"></script>
+    
     <main>
         <img class="banniere" src="img/Accueil/banniere.webp" alt="Bannière">
 
@@ -74,7 +92,7 @@
                 <div class="carteGaucheAccueil">
                     <div class="conteneurVisuel">
                         <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/david brownie.jpg" alt="David Brownie" class="visuelArtiste">
+                        <img src="img/Programation/davidBrownie.jpg" alt="David Brownie" class="visuelArtiste">
                         <h2 class="nomArtiste">David Brownie</h2>
                     </div>
                     <ul class="infosCles">
