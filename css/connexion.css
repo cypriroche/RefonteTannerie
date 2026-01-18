@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column; /* ça place le titre au-dessus du formulaire */
   align-items: center;
-  padding-top: 60px;
+  padding-top: 120px; /* padding top augmenté pour header fixe et menu burger */
 }
 
 /* conteneur du formulaire */
@@ -52,6 +52,7 @@ input {
   border: none;
   background-color: #f5f5f5;
   font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
 button {
@@ -61,8 +62,8 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  box-sizing: border-box;
 }
-
 button:hover {
   background-color: #EA6B38;
 }
@@ -83,8 +84,66 @@ button:hover {
   text-decoration: underline;
 }
 
-/* la largeur des champs va jusquau bouton se connecter/s'inscrire */
+/* la largeur des champs va jusqu’au bouton se connecter/s'inscrire */
 input,
 button {
   box-sizing: border-box;
+}
+
+/* Menu burger pour la version mobile responsive */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* media queries qui permettent le responsive */
+
+@media (max-width: 700px) {
+
+    .burger {
+      display: flex;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+    }
+
+    /* menu qui est caché de base */
+    nav {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      flex-direction: column;
+    }
+
+    /* Menu visible quand le js ajoute .open */
+    nav.open {
+      display: flex;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 20px;
+    }
+
+    .menu-deroulant-menu {
+      display: none;
+      flex-direction: column;
+      padding-left: 10px;
+    }
 }
