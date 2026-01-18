@@ -22,7 +22,7 @@
             <!-- LOGO cliquable qui retourne à l'accueil -->
             <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
-        <nav>
+        <nav id="menuPrincipal">
             <!-- nav qui affiche le menu -->
             <ul>
                 <li><a href="programmation.php">Programmation</a></li>
@@ -40,7 +40,13 @@
                 <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
             </ul>
         </nav>
+            <button id="burger" class="burger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
     </header>
+    <script src="js/menu.js"></script>
     <main>
         <section class="section-bannière">
             <h1>La Tannerie</h1>
