@@ -3,6 +3,13 @@ require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../poo/database.php';
 session_start();
 
+// Connexion à la base de données 
+        $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+        // appel de la function de connexion
+        $connection = $db->getConnection();
+        // requête pour récupérer les événements grâce à la function query dans database.php
+        $modifEvenements = $db->query("SELECT * FROM evenement");
+
 ?>
 
 
@@ -58,43 +65,50 @@ session_start();
         <label class="labelFormulaire" for="evenement">Choisissez l'évènement à modifier</label><br>
         <select id="evenement" name="evenement" class="optionsEvenement">
             <option value="">Sélectionnez un événement</option>
-            <option value="concert1">Concert 1</option>
-            <option value="concert2">Concert 2</option>
-            <option value="concert3">Concert 3</option>
-            <option value="concert4">Concert 4</option>
-            <option value="concert5">Concert 5</option>
+            <!-- affichage des événements en liste grâce à une boucle -->
+            <?php
+            foreach ($modifEvenements as $modifEvenement) {
+                // la valeur de l'option est l'id de l'événement et le texte affiché est le nom de l'artiste
+                echo '<option value="'.$modifEvenement['id_evenement'].'">'.$modifEvenement['artiste'].'</option>';
+            }
+            ?>
         </select><br><br>
 
         <button class="boutonFormulaire" type="submit"> Valider</button>
     </form>
 
-    <form action="lien" method="POST" class="formulaireEvenement">
+    <form action="../script/modif_evenement.php" method="POST" class="formulaireEvenement">
 
+        <h1 class="titreFormulaire">Ajouter un événement</h1>
+            
         <label class="labelFormulaire" for="nomArtiste">Nom de l'artiste</label>
-        <input class="champFormulaire" type="text" id="nomArtiste" name="nomArtiste" required>
+        <input class="champFormulaire" type="text" id="nomArtiste" name="nomArtiste" value="<?php echo $modifEvenement['artiste']?>" required>
 
-        <label class="labelFormulaire" for="image">Image</label>
+        <!-- <label class="labelFormulaire" for="image">Image</label>
         <input class="champFormulaire" type="file" id="image" name="image" accept="image/*" required>
+         -->
+        <label class="labelFormulaire" for="image">Image</label>
+        <input class="champFormulaire" type="text" id="image" name="image" value="<?php echo $modifEvenement['visuel']?>" required>
 
         <label class="labelFormulaire" for="date">Date</label>
-        <input class="champFormulaire" type="date" id="date" name="date" required>
+        <input class="champFormulaire" type="date" id="date" name="date" value="<?php echo $modifEvenement['date_evenement']?>" required>
 
         <label class="labelFormulaire" for="heure">Heure</label>
-        <input class="champFormulaire" type="time" id="heure" name="heure" required>
+        <input class="champFormulaire" type="time" id="heure" name="heure" value="<?php echo $modifEvenement['heure_evenement']?>" required>
 
         <label class="labelFormulaire" for="ouverture">Ouverture des portes</label>
-        <input class="champFormulaire" type="time" id="ouverture" name="ouverture">
+        <input class="champFormulaire" type="time" id="ouverture" name="ouverture" value="<?php echo $modifEvenement['heure_ouverture']?>">
 
         <label class="labelFormulaire" for="infos">Informations</label>
-        <textarea class="champFormulaire" id="infos" name="infos" rows="4"></textarea>
+        <textarea class="champFormulaire" id="infos" name="infos" rows="4"><?php echo $modifEvenement['informations']?></textarea>
 
         <label class="labelFormulaire" for="signature">Signature</label>
-        <input class="champFormulaire" type="text" id="signature" name="signature">
+        <input class="champFormulaire" type="text" id="signature" name="signature" value="<?php echo $modifEvenement['signature']?>">
 
         <label class="labelFormulaire" for="prix">Prix en € </label>
-        <input class="champFormulaire" type="number" id="prix" name="prix" required>
+        <input class="champFormulaire" type="number" id="prix" name="prix" value="<?php echo $modifEvenement['tarif_plein']?>" required>
 
-        <button type="submit" class="boutonFormulaire">Modifier l'événement</button>
+        <button type="submit" class="boutonFormulaire">Ajouter l'événement</button>
     </form>
 
   </main>

@@ -63,7 +63,7 @@ session_start();
             <input class="champFormulaire" type="file" id="image" name="image" accept="image/*" required>
              -->
             <label class="labelFormulaire" for="image">Image</label>
-            <input class="champFormulaire" type="text" id="image" name="image" required>
+            <input class="champFormulaire" type="text" id="image" name="image" placeholder="http://localhost/RefonteTannerie/img/jul.png" required>
 
             <label class="labelFormulaire" for="date">Date</label>
             <input class="champFormulaire" type="date" id="date" name="date" required>

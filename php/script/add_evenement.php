@@ -9,6 +9,7 @@ $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
 
 /* Traite l'ajout d'un événement depuis le formulaire admin */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // déclaration des variables récupérées depuis le formulaire
 	$artiste = $_POST['nomArtiste'] ?? '';
 	$date = $_POST['date'] ?? '';
 	$heure = $_POST['heure'] ?? '';
@@ -18,20 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$prix = $_POST['prix'] ?? 0;
 	$style = $_POST['style'] ?? '';
 
-	// $visuelPath = '';
-	// if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-	// 	$uploadDir = __DIR__ . '/../../img/Programation/';
-	// 	if (!is_dir($uploadDir)) mkdir($uploadDir, 0755, true);
-	// 	$tmp = $_FILES['image']['tmp_name'];
-	// 	$orig = basename($_FILES['image']['name']);
-	// 	$ext = pathinfo($orig, PATHINFO_EXTENSION);
-	// 	$name = uniqid('evt_') . '.' . $ext;
-	// 	if (move_uploaded_file($tmp, $uploadDir . $name)) {
-	// 		$visuelPath = 'img/Programation/' . $name;
-	// 	}
-	// }
+	$visuelPath = $_POST['image'] ?? '';
 
+    // requête d'insertion  
 	$requete = $connection->prepare('INSERT INTO evenement (artiste, visuel, date_evenement, heure_evenement, style, heure_ouverture, informations, signature, tarif_plein) VALUES (:artiste, :visuel, :date, :heure, :style, :ouverture, :infos, :signature, :prix)');
+    // bindParam pour sécuriser les données
 	$requete->bindParam(':artiste', $artiste, PDO::PARAM_STR);
 	$requete->bindParam(':visuel', $visuelPath, PDO::PARAM_STR);
 	$requete->bindParam(':date', $date, PDO::PARAM_STR);
@@ -40,10 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$requete->bindParam(':ouverture', $ouverture, PDO::PARAM_STR);
 	$requete->bindParam(':infos', $infos, PDO::PARAM_STR);
 	$requete->bindParam(':signature', $signature, PDO::PARAM_STR);
-	$requete->bindParam(':prix', $prix);
+	$requete->bindParam(':prix', $prix, PDO::PARAM_INT);
 
+    // exécution de la requête
 	$requete->execute();
 }
 
-header('Location:../admin/admin.php');
+header('Location:../admin/admin.php?status=added');
 exit();

@@ -242,14 +242,52 @@ body {
     background: linear-gradient(to right, #ffffff, #EA6B38);
 }
 
+
+/* Filtre programmation (version simple) */
+.filtre {
+    margin: 16px auto;
+    max-width: 1100px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Open Sans", sans-serif;
+}
+.filtre label { 
+    font-weight:700; 
+    margin-right:6px; 
+}
+
+.filtre select, .filtre input[type="search"] {
+    padding:8px 10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:#fff;
+    color:#343330;
+}
+.filtre .btn { 
+    background:#EA6B38;
+    color:#fff; padding:8px 12px;
+    padding:8px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    border:none;
+    font-weight:700;
+}
+
+
+
+
+
 /* Programmation de l'accueil */ 
 
 .carteAccueil {
     display: grid;
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     color: white;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serifx;
     font-style: italic;
     border-radius: 1rem;
 }
@@ -257,6 +295,7 @@ body {
 .carteGaucheAccueil {
     display: flex;
     flex-direction: column;
+    width: 300px;
     gap: 10px;
     padding: 15px;
     background-color: #EA6B38;

@@ -2,7 +2,12 @@
 require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/../poo/database.php';
 session_start();
-
+// Connexion à la base de données 
+        $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+        // appel de la function de connexion
+        $connection = $db->getConnection();
+        // requête pour récupérer les événements grâce à la function query dans database.php
+        $supEvenements = $db->query("SELECT id_evenement, artiste FROM evenement");
 ?>
 
 
@@ -52,17 +57,18 @@ session_start();
     </header>
   <main>
         <a href="admin.php" class="boutonRetour">×</a>
-        <form action="/supprimer-evenement" method="post" class="formulaireEvenement">
+        <form action="../script/sup_evenement.php" method="post" class="formulaireEvenement">
             <h1 class="titreFormulaire">Supprimer un événement</h1>
             <label class="labelFormulaire"for="evenement">Choisissez l'évènement à supprimer</label><br>
-            <select id="evenement" name="evenement" class="optionsEvenement">
-                <option value="">Sélectionnez un événement</option>
-                <option value="concert1">Concert 1</option>
-                <option value="concert2">Concert 2</option>
-                <option value="concert3">Concert 3</option>
-                <option value="concert4">Concert 4</option>
-                <option value="concert5">Concert 5</option>
-            </select><br><br>
+            <select name="id_evenement" class="optionsEvenement" required>
+            <!-- Sélection de l'élément que l'on souhaite supprimer -->
+            <option value="">Sélectionnez un événement</option>
+            <?php
+            foreach ($supEvenements as $supEvenement) {
+                echo '<option value="'.$supEvenement['id_evenement'].'">'.$supEvenement['artiste'].'</option>';
+            }
+            ?>
+        </select><br><br>
 
             <button class="boutonFormulaire" type="submit"> Supprimer l'événement </button>
         </form>

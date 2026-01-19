@@ -1,4 +1,17 @@
-<?php session_start(); ?>
+<?php 
+include 'php/config.php';
+include 'php/poo/database.php';
+include 'php/poo/evenement.php';
+session_start();
+ // Connexion à la base de données 
+        $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+        // appel de la function de connexion
+        $connection = $db->getConnection();
+        
+        // requête pour récupérer les événements grâce à la function query dans database.php
+        $carteEvenements = $db->query("SELECT * FROM evenement LIMIT 3");
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -51,50 +64,23 @@
 
         <h1 class="titresAccueil">Programmation</h1>
         <section class="listeCartesAccueil">
+            <?php foreach ($carteEvenements as $carteEvenement) : ?>
             <article class="carteAccueil">
                 <div class="carteGaucheAccueil">
                     <div class="conteneurVisuel">
                         <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/daftpunk.png" alt="Daft Punk" class="visuelArtiste">
-                        <h2 class="nomArtiste">Daft Punk</h2>
+                        <img src="<?php echo $carteEvenement['visuel']; ?>" alt="<?php echo $carteEvenement['artiste']; ?>" class="visuelArtiste">
+                        <h2 class="nomArtiste"><?php echo $carteEvenement['artiste']; ?></h2>
                     </div>
                     <ul class="infosCles">
-                        <li class="date">Mardi 9 novembre 2027</li>
-                        <li class="heure">20h30</li>
-                        <li class="genre">Electro</li>
+                        <li class="date"><?php echo $carteEvenement['date_evenement']; ?></li>
+                        <li class="heure"><?php echo $carteEvenement['heure_evenement']; ?></li>
+                        <li class="genre"><?php echo $carteEvenement['style']; ?></li>
                     </ul>
                 </div>
             </article>
+            <?php endforeach; ?>
 
-            <article class="carteAccueil">
-                <div class="carteGaucheAccueil">
-                    <div class="conteneurVisuel">
-                        <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/jul.png" alt="Jul" class="visuelArtiste">
-                        <h2 class="nomArtiste">Jul</h2>
-                    </div>
-                    <ul class="infosCles">
-                        <li class="date">Mardi 23 novembre 2027</li>
-                        <li class="heure">21h00</li>
-                        <li class="genre">Rap</li>
-                    </ul>
-                </div>
-            </article>
-
-            <article class="carteAccueil">
-                <div class="carteGaucheAccueil">
-                    <div class="conteneurVisuel">
-                        <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <img src="img/Programation/david brownie.jpg" alt="David Brownie" class="visuelArtiste">
-                        <h2 class="nomArtiste">David Brownie</h2>
-                    </div>
-                    <ul class="infosCles">
-                        <li class="date">Samedi 12 février 2028</li>
-                        <li class="heure">21h00</li>
-                        <li class="genre">Rock</li>
-                    </ul>
-                </div>
-            </article>
         </section>
         <div class="boutonCentre">
             <a href="programmation.php" class="boutonAccueil">Voir toute la programmation</a>

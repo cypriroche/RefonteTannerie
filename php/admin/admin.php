@@ -50,8 +50,18 @@ session_start();
           </ul>
       </nav>
   </header>
-  <main>
-  <div class="actionsAdmin">
+    <main>
+    <?php if (!empty($_GET['status'])):
+                $msg = '';
+                if ($_GET['status'] === 'deleted') $msg = 'Suppression réussie';
+                elseif ($_GET['status'] === 'added') $msg = 'Ajout réussi';
+                elseif ($_GET['status'] === 'modified') $msg = 'Modification réussie';
+    ?>
+        <div class="flash-message" style="background:#d4edda;color:#155724;padding:10px;border-radius:4px;margin:16px 0;">
+                <?php echo htmlspecialchars($msg); ?>
+        </div>
+    <?php endif; ?>
+    <div class="actionsAdmin">
 
         <a href="ajoutEvenement.php">
             <button class="actionBouton">

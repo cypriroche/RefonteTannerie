@@ -4,6 +4,14 @@ include 'php/poo/database.php';
 include 'php/poo/evenement.php';
 session_start();
 
+ // Connexion à la base de données 
+        $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+        // appel de la function de connexion
+        $connection = $db->getConnection();
+        
+        // requête pour récupérer les événements grâce à la function query dans database.php
+        $carteEvenements = $db->query("SELECT * FROM evenement");
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -53,17 +61,30 @@ session_start();
     </header>
 
     <main>
+
+<form class="filtre" method="get" action="programmation.php" aria-label="Filtre et recherche événements">
+    <label for="style">Style</label>
+    <select id="style" name="style">
+      <option value="">Tous</option>
+        <?php foreach ($carteEvenements as $carteEvenement) {
+                // la valeur de l'option est l'id de l'événement et le texte affiché est le nom de l'artiste
+                echo '<option value="'.$carteEvenement['style'].'">'.$carteEvenement['style'].'</option>';
+            }    ?>
+    </select>
+
+    <label for="artiste">Artiste</label>
+    <input type="search" id="artiste" name="artiste" placeholder="Recherche par artiste" />
+
+    <div class="filter-actions">
+      <!-- <button type="submit" class="btn">Filtrer</button> -->
+      <a href="programmation.php" class="btn btn-reset" role="button">Réinitialiser</a>
+    </div>
+</form>
+    
         <section class="listeCartes">
 
         <?php
-        // Connexion à la base de données 
-        $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
-        // appel de la function de connexion
-        $connection = $db->getConnection();
-        
-        // requête pour récupérer les événements grâce à la function query dans database.php
-        $carteEvenements = $db->query("SELECT * FROM evenement");
-
+       
         // index pour alterner les cartes
         $index = 0;
         foreach ($carteEvenements as $carteEvenement) :
