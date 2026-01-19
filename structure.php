@@ -23,7 +23,7 @@ session_start();
         <a href="index.php" class="logo-header">
             <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
-        <nav>
+        <nav id="menuPrincipal">
             <ul>
                 <li><a href="programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
@@ -49,8 +49,13 @@ session_start();
                 <?php endif; ?>
             </ul>
         </nav>
+        <button id="burger" class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
-    
+    <script src="js/menu.js"></script>   
     <main class="structure">
 
  <section class="section-bannière">

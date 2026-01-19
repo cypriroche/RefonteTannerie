@@ -58,10 +58,10 @@ session_start();
             </ul>
         </nav>
         <button id="burger" class="burger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
     <script src="js/menu.js"></script>                
     <main>
