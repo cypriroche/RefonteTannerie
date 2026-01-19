@@ -89,12 +89,11 @@ session_start();
         <section class="listeCartes">
 
         <?php
-       
-        // index pour alterner les cartes
-        $index = 0;
-        foreach ($carteEvenements as $carteEvenement) :
-            // Savoir si la carte est inversé
-               $isInverse = ($index % 2 === 1);?>
+            $index = 0;
+            foreach ($carteEvenements as $carteEvenement) :
+            $isInverse = ($index % 2 === 1);
+            $id = $carteEvenement['id_evenement']; 
+        ?>
 
             <!--  On rajoute la classe "inverse" quand la carte doit être inversée -->
             <article class="carteEvenement<?= $isInverse ? ' inverse' : '' ?>">

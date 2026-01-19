@@ -1,95 +1,89 @@
-<?php session_start(); ?>
+    <?php
+    include 'php/config.php';
+    include 'php/poo/database.php';
+    include 'php/poo/evenement.php';
+    session_start();
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/favicon.jpg">    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/styles.css">
-    <title>Événement</title>
-</head>
-<body>
-    <header>
-        <a href="index.php" class="logo-header">
-            <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="programmation.php">Programmation</a></li>
-                <li class="menu-deroulant">
-                    <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
-                    <ul class="menu-deroulant-menu">
-                        <li><a href="structure.php">La structure</a></li>
-                        <li><a href="rse.php">RSE</a></li>
-                        <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
-                    </ul>
-                </li>
-                <li><a href="services.php">Nos services</a></li>
-                <li><a href="nousTrouver.php">Nous trouver</a></li>
-                <?php if (!empty($_SESSION['is_admin'])) : ?>
-                    <li class="menu-deroulant admin">
-                        <img src="img/icon/user.png" alt="Utilisateur">
-                        <ul class="menu-deroulant-menu">
-                            <li><a href="php/admin/admin.php">Admin</a></li>
-                            <li><a href="php/admin/logout.php">Se déconnecter</a></li>
-                        </ul>
-                    </li>
-                <?php else: ?>
-                    <li class="nav-user"><a href="php/admin/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
-                <?php endif; ?>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    // Connexion à la base de données
+    $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+    $connection = $db->getConnection();
 
-
-    </main>
-
-    <footer>
+    if (isset($_GET['id']) && !empty($_GET['id'])) {
         
-        <div class="footer-container">
-            <div class="logo-container">
-            <a href="index.php">
-                <img src="img/logo-tannerie.png" alt="Logo La tannerie Bourg en Bresse">
-            </a>
-            </div>
+        $id = intval($_GET['id']);
 
-            <!-- menu footer -->
-            <div class="footer-menu">
-                <ul>
-                    <li><a href="programmation.php">Programmation</a></li>
-                    <li><a href="tannerie.php">La Tannerie</a></li>
-                    <li><a href="services.php">Nos services</a></li>
-                    <li><a href="nousTrouver.php">Nous trouver</a></li>
+        $sql = "SELECT * FROM evenement WHERE id_evenement = :id";
+        
+        $statement = $connection->prepare($sql);
+
+        $statement->execute([':id' => $id]);
+
+        $carteEvenement = $statement->fetch(PDO::FETCH_ASSOC);
+    } 
+    ?>
+
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/favicon.jpg">    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styleprog.css">
+        <title>Événement</title>
+    </head>
+    <body>
+        <main>
+        <article class="carteEvenement">
+            <div class="carteGauche">
+                <div class="conteneurVisuel">
+                    <img src="images/logo.png" alt="Logo" class="logo">
+                    <img src="img/logo.png" alt="Logo" class="logoCarte">
+                            <!-- Affichage dynamique des éléments de la carte -->
+                            <img src="<?php echo $carteEvenement['visuel']; ?>" alt="<?php echo $carteEvenement['artiste']; ?>" class="visuelArtiste">
+                    <h2 class="nomArtiste"><?php echo $carteEvenement['artiste']; ?></h2>
+                </div>
+
+                <ul class="infosCles">
+                    <li class="date"><?php echo $carteEvenement['date_evenement']; ?></li>
+                    <li class="heure"><?php echo $carteEvenement['heure_evenement']; ?></li>
+                    <li class="genre"><?php echo $carteEvenement['style']; ?></li>
                 </ul>
             </div>
-            
-           <!-- icon résaux sociaux -->
-            <div class="icones-reseaux">
-                <a href="https://www.facebook.com/latannerie" aria-label="Facebook">
-                    <img src="img/icon/facebook-icon.png" alt="Facebook">
-                </a>
-                <a href="https://x.com/LaTannerie" aria-label="X">
-                    <img src="img/icon/x-icon.png" alt="X">
-                </a>
-                <a href="https://www.youtube.com/channel/UCxKtBCxXr0KrnHim09zdMuA" aria-label="Youtube">
-                    <img src="img/icon/youtube-icon.png" alt="Youtube">
-                </a>
-                <a href="https://www.facebook.com/latannerie" aria-label="Tiktok">
-                    <img src="img/icon/tiktok-icon.png" alt="Tiktok">
-                </a>
-                <a href="https://www.instagram.com/latannerie01/" aria-label="Instagram">
-                    <img src="img/icon/instagram-icon.png" alt="Instagram">
-                </a>
+
+            <div class="carteDroite">
+                <div class="enteteDate">
+                    <span class="barres">////////////</span>
+                    <?php echo $carteEvenement['date_entiere']; ?>
+                </div>
+
+                <p class="ouverture">Ouverture des portes à <?php echo $carteEvenement['heure_ouverture']; ?></p>
+
+                <div class="description">
+                            <p>
+                                <?php echo $carteEvenement['informations']; ?>
+                            </p>
+                            <p class="signature">
+                                <?php echo $carteEvenement['signature']; ?>
+                            </p>
+                        </div>
+
+                <div class="blocInfosSup">
+                    <div class="infoPmr">Accessibilité : <strong><?php echo $carteEvenement['accessibilite']; ?></strong> </div>
+                    
+                    <div class="grillePrixDetail">
+                        <div class="prix-ligne">Plein tarif : <strong><?php echo $carteEvenement['tarif_plein']; ?> €</strong></div>
+                        <div class="prix-ligne">Tarif réduit : <strong><?php echo $carteEvenement['tarif_reduit']; ?> €</strong></div>
+                    </div>
+                </div>
+
+                <div class="conteneur-bouton">
+                    <a href="#" class="boutonBilletterie">BILLETTERIE</a>
+                </div>
             </div>
-        </div>
-        
-        <!-- informations sur les droits d'auteurs -->
-        <div class="droit-d-auteurs">
-            <p>© 2026 La Tannerie - Tous droits réservés</p>
-        </div>
-    </footer>
-</body>
-</html>
+        </article>
+        </main>
+    </body>
+    </html>
