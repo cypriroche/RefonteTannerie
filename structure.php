@@ -1,7 +1,7 @@
 <?php
 include 'php/config.php';
 include 'php/poo/database.php';
-include 'php/poo/Membre.php';
+include 'php/poo/membres.php';
 session_start();
 
 ?>

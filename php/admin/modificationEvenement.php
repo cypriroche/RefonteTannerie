@@ -66,7 +66,7 @@ session_start();
   <main>
   <a href="admin.php" class="boutonRetour">×</a>
 
-    <form action="/supprimer-evenement" method="post" class="formulaireEvenement">
+    <form action="../../API/recupererEvenement.php" method="GET" class="formulaireEvenement">
         <h1 class="titreFormulaire">Evénement à modifier</h1>
         <label class="labelFormulaire" for="evenement">Choisissez l'évènement à modifier</label><br>
         <select id="evenement" name="evenement" class="optionsEvenement">
