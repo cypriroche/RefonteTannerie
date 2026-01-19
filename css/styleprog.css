@@ -444,3 +444,77 @@ body {
         height: 60px;
     }
 }
+
+/* STYLE CARTES DETAILLEES */
+
+.enteteDate {
+    font-family: "Open Sans";
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #343330;
+    margin-bottom: 15px;
+}
+
+.enteteDate .barres {
+    color: #333333;
+    margin-right: 10px;
+    letter-spacing: -2px;
+}
+
+/* Bloc accessibilité pmr et tarifs */
+
+.blocInfosSup {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-style: normal;
+}
+
+.infoPmr {
+    font-weight: 600;
+}
+
+.grillePrixDetail {
+    text-align: right;
+    padding-top: 30px;
+}
+
+/* Bouton billetterie */
+
+.boutonBilletterie {
+    display: inline-block;
+    align-self: center;
+    background-color: white;
+    color: #343330;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 12px 35px;
+    border-radius: 50px; 
+    margin-top: 25px;
+    font-family: "Open Sans";
+    letter-spacing: 1px;
+    transition: transform 0.2s ease;
+}
+
+.boutonBilletterie:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+/* Lien vers les cartes */ 
+
+.lienCartes {
+    display: block;        
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s
+}
+
+.lienCartes:hover .carteEvenement {
+    cursor: pointer;
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
