@@ -1,95 +1,130 @@
 /*------------------------------------------------------------
-1. RÉGLAGES DE BASE
+1. RÉGLAGES GÉNÉRAUX
 ------------------------------------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: "Open Sans", sans-serif;
     color: #343330;
-    line-height: 1.6;
     background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* Évite les bugs de scroll horizontal */
 }
 
 .conteneur {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 0 20px;
 }
-
-.separateurGauche,
-.separateurDroite {
-    height: 6px;
-    background: linear-gradient(to right, #EA6B38, #ffffff);
-    margin: 30px 0;
-    width: 70%;
-}
-
 
 /*------------------------------------------------------------
-2. TITRES ET TEXTES
+2. BANNIÈRE (LE TITRE SUR L'IMAGE)
+------------------------------------------------------------*/
+.section-banniere {
+    position: relative;
+    /* Référence pour le titre en absolute */
+    width: 100vw;
+    height: 300px;
+    /* Hauteur de ta bannière */
+    background-color: #333;
+    /* Fond de secours */
+}
+
+.section-banniere img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* L'image remplit tout l'espace proprement */
+    display: block;
+}
+
+.overlay-banniere {
+    /* On crée une couche par-dessus l'image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* On centre le contenu de cette couche */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Filtre sombre pour rendre le texte blanc lisible */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+.titre-sur-image {
+    font-family: "Trade Winds", cursive;
+    color: #ffffff;
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    padding: 0 20px;
+}
+
+/*------------------------------------------------------------
+3. TITRES ET CONTENU
 ------------------------------------------------------------*/
 .titre-principal {
     font-family: "Trade Winds", cursive;
     font-size: 2.5rem;
-    color: #343330;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 0;
 }
 
 .introduction {
     font-size: 1.1rem;
-    color: #555;
+    line-height: 1.6;
     margin-bottom: 40px;
-    margin-top: 20px;
-    max-width: 900px;
 }
 
 /*------------------------------------------------------------
-3. GRILLES ET CARTES (Layout)
+4. GRILLE ET CARTES
 ------------------------------------------------------------*/
-/* Grille pour les 3 cartes d'actions */
-.grille-actions,
-.grille-tarifs {
+.grille-actions {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-bottom: 50px;
 }
 
-/* Style des petites boîtes grises */
-.carte-simple,
-.tableau-prix,
-.niveau-item {
+.carte-simple {
     background: #f9f9f9;
     padding: 30px;
     border-radius: 15px;
-    border: 1px solid #eee;
-    transition: transform 0.3s ease;
+    border-left: 5px solid #EA6B38;
+    /* Petite touche de couleur sur le côté */
+    transition: transform 0.3s;
 }
 
 .carte-simple:hover {
     transform: translateY(-5px);
-    border-color: #EA6B38;
 }
 
 .carte-simple h3 {
-    margin-bottom: 15px;
+    margin-top: 0;
     color: #EA6B38;
 }
 
 /*------------------------------------------------------------
-4. ACCORDÉONS (Details / Summary)
+5. SÉPARATEUR & ACCORDÉONS
 ------------------------------------------------------------*/
-.liste-accordeons {
-    margin: 30px 0;
+.separateurGauche {
+    height: 6px;
+    width: 100vw;
+    margin: 40px 0;
+    background: linear-gradient(to right, #EA6B38, transparent);
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
 }
 
 details {
-    background: #fff;
-    border: 2px solid #343330;
+    border: 1px solid #343330;
     margin-bottom: 10px;
     border-radius: 8px;
     overflow: hidden;
@@ -97,13 +132,10 @@ details {
 
 summary {
     padding: 15px 20px;
-    font-weight: bold;
     cursor: pointer;
-    list-style: none;
-    /* Cache la flèche par défaut */
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
-    transition: background 0.3s;
 }
 
 summary:hover {
@@ -114,168 +146,37 @@ summary:hover {
 .contenu-texte {
     padding: 20px;
     background: #fdfdfd;
-    border-top: 1px solid #343330;
 }
 
 /*------------------------------------------------------------
-5. BLOC ALERTES (Travaux)
+6. RESPONSIVE
 ------------------------------------------------------------*/
-.alerte-travaux {
-    background-color: #fff4e5;
-    border-left: 6px solid #EA6B38;
-    padding: 25px;
-    margin: 40px 0;
-    border-radius: 4px;
-}
-
-.alerte-travaux h3 {
-    color: #EA6B38;
-    margin-bottom: 10px;
-}
-
-/*------------------------------------------------------------
-6. VIDÉOS ET MULTIMÉDIA
-------------------------------------------------------------*/
-
-.bloc-presentation img {
-    width: 100%;
-    max-width: 900px;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    display: block;
-}
-
-.video-container,
-.carte-video {
-    position: relative;
-    width: 100%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.video-container iframe,
-.carte-video iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    display: block;
-}
-
-
-.grille-videos-trufferies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-    .grille-videos-trufferies {
-        grid-template-columns: 1fr;
-    }
-}
-
-/*------------------------------------------------------------
-7. BOUTONS ET TAGS
-------------------------------------------------------------*/
-.bouton-plus {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #343330;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.bouton-plus:hover {
-    background-color: #EA6B38;
-    transform: scale(1.05);
-}
-
-.tag-rse {
-    display: inline-block;
-    background: #EA6B38;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-/*------------------------------------------------------------
-8. SECTIONS SPÉCIFIQUES
-------------------------------------------------------------*/
-.double-colonne {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    margin: 60px 0;
-}
-
 @media (max-width: 850px) {
-    .double-colonne {
-        grid-template-columns: 1fr;
+    .section-banniere {
+        height: 300px;
+    }
+
+    .titre-sur-image {
+        font-size: 2rem;
     }
 }
 
-.center {
-    text-align: center;
-}
-
-.separateur-droite {
-    height: 6px;
-    margin: 50px 0;
-    width: 100%;
-    background: linear-gradient(to right, transparent, #EA6B38);
-}
-
-
-/* Conteneur principal de la section MAO */
-.conteneur-mao {
+summary {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
     display: flex;
-    flex-direction: row;
-    /* Aligne les colonnes côte à côte */
-    align-items: center;
-    /* CENTRE verticalement la vidéo par rapport au texte */
     justify-content: space-between;
-    /* Espace les deux colonnes */
-    gap: 40px;
-    /* Espace entre le texte et la vidéo */
-    margin: 60px 0;
+    align-items: center;
+    transition: background 0.3s ease;
 }
 
-/* Chaque colonne prend 50% de la largeur */
-.colonne-texte,
-.colonne-video {
-    flex: 1;
+
+.fleche {
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
-/* Style spécifique pour espacer les cartes de niveaux */
-.grille-niveaux {
-    display: flex;
-    flex-direction: column;
-    /* Cartes l'une sous l'autre */
-    gap: 20px;
-    margin-top: 20px;
-}
-
-/* Adaptation pour les téléphones */
-@media (max-width: 850px) {
-    .conteneur-mao {
-        flex-direction: column;
-        /* Empile le texte et la vidéo sur mobile */
-        text-align: center;
-    }
-
-    .colonne-video {
-        width: 100%;
-        /* La vidéo prend toute la largeur sur mobile */
-    }
+details[open] .fleche {
+    transform: rotate(90deg);
 }
