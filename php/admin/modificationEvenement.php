@@ -108,6 +108,7 @@ session_start();
         <label class="labelFormulaire" for="prix">Prix en € </label>
         <input class="champFormulaire" type="number" id="prix" name="prix" value="<?php echo $modifEvenement['tarif_plein']?>" required>
 
+        <input type="hidden" name="id_evenement" value="<?php echo $modifEvenement['id_evenement']; ?>">
         <button type="submit" class="boutonFormulaire">Ajouter l'événement</button>
     </form>
 

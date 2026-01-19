@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li class="menu-deroulant admin">
                         <img src="../../img/icon/user.png" alt="Utilisateur">
                         <ul class="menu-deroulant-menu">
-                            <li><a href="admin.html">Admin</a></li>
+                            <li><a href="admin.php">Admin</a></li>
                             <li><a href="logout.php">Se déconnecter</a></li>
                         </ul>
                     </li>
