@@ -68,8 +68,8 @@ session_start();
 
     <form action="../../API/recupererEvenement.php" method="GET" class="formulaireEvenement">
         <h1 class="titreFormulaire">Evénement à modifier</h1>
-        <label class="labelFormulaire" for="evenement">Choisissez l'évènement à modifier</label><br>
-        <select id="evenement" name="evenement" class="optionsEvenement">
+        <label class="labelFormulaire" for="selectEvenement">Choisissez l'évènement à modifier</label><br>
+        <select id="selectEvenement" name="id_evenement" class="optionsEvenement">
             <option value="">Sélectionnez un événement</option>
             <!-- affichage des événements en liste grâce à une boucle -->
             <?php

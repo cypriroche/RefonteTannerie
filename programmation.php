@@ -25,6 +25,8 @@ session_start();
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styleprog.css">
 
+
+
     <title>Programmation</title>
 </head>
 <body>
@@ -86,7 +88,7 @@ session_start();
     </div>
 </form>
     
-        <section class="listeCartes">
+        <section  class="listeCartes" >
 
         <?php
        
@@ -95,37 +97,45 @@ session_start();
         foreach ($carteEvenements as $carteEvenement) :
             // Savoir si la carte est inversé
                $isInverse = ($index % 2 === 1);?>
+               <div id="carteEvenement">
+
+               </div>
 
             <!--  On rajoute la classe "inverse" quand la carte doit être inversée -->
-            <article class="carteEvenement<?= $isInverse ? ' inverse' : '' ?>">
+            
+                
+            
+            <?php $index++; ?>
+        <?php endforeach; ?>
+
+
+        <script id="templateEvenements" type="text/html">
+            {{#evenements}}
+            <article  class="carteEvenement<?= $isInverse ? ' inverse' : '' ?>">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
                         <img src="img/logo.png" alt="Logo" class="logoCarte">
-                        <!-- Affichage dynamique des éléments de la carte -->
-                        <img src="<?php echo $carteEvenement['visuel']; ?>" alt="<?php echo $carteEvenement['artiste']; ?>" class="visuelArtiste">
-                        <h2 class="nomArtiste"><?php echo $carteEvenement['artiste']; ?></h2>
+                        <img src="{{visuel}}" alt="{{artiste}}" class="visuelArtiste">
+                        <h2 class="nomArtiste">{{artiste}}</h2>
                     </div>
                     <ul class="infosCles">
-                        <li class="date"><?php echo $carteEvenement['date_evenement']; ?></li>
-                        <li class="heure"><?php echo $carteEvenement['heure_evenement']; ?></li>
-                        <li class="genre"><?php echo $carteEvenement['style']; ?></li>
+                        <li class="date">{{date_evenement}}</li>
+                        <li class="heure">{{heure_evenement}}</li>
+                        <li class="genre">{{style}}</li>
                     </ul>
                 </div>
                 <div class="carteDroite">
-                    <p class="ouverture">Ouverture des portes à <?php echo $carteEvenement['heure_ouverture']; ?></p>
+                    <p class="ouverture">Ouverture des portes à {{heure_ouverture}}</p>
                     <div class="description">
-                        <p>
-                            <?php echo $carteEvenement['informations']; ?>
-                        </p>
-                        <p class="signature">
-                            <?php echo $carteEvenement['signature']; ?>
-                        </p>
+                        <p>{{informations}}</p>
+                        <p class="signature">{{signature}}</p>
                     </div>
-                    <div class="prix"><?php echo $carteEvenement['tarif_plein']. " €"; ?></div>
+                    <div class="prix">{{tarif_plein}} €</div>
                 </div>
-            </article>
-            <?php $index++; ?>
-        <?php endforeach; ?>
+                </article>
+            {{/evenements}}
+        </script>
+
         </section>
     </main>
 
@@ -166,7 +176,9 @@ session_start();
             <p>© 2026 La Tannerie - Tous droits réservés</p>
         </div>
     </footer>
+
+    <script src="js/mustache.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>
-
-

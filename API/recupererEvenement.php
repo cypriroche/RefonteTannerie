@@ -10,7 +10,8 @@ else{
 
 
 	// pour se connecter à la base de données
-	include("../config/configuration.php");
+	include("../php/config.php");
+	include("../php/poo/database.php");
 
 	// connection
 	try {
