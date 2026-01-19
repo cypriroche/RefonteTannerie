@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <a href="../../index.php" class="logo-header">
           <img src="../../img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
       </a>
-      <nav>
+      <nav id="menuPrincipal">
                 <ul>
                 <li><a href="../../programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
@@ -79,7 +79,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <?php endif; ?>
           </ul>
       </nav>
+      <button id="burger" class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
   </header>
+  <script src="js/menu.js"></script>
   <main>
   <div class="page">
 
