@@ -2,6 +2,7 @@
 include 'php/config.php';
 include 'php/poo/database.php';
 include 'php/poo/evenement.php';
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +37,17 @@ include 'php/poo/evenement.php';
                 </li>
                 <li><a href="services.php">Nos services</a></li>
                 <li><a href="nousTrouver.php">Nous trouver</a></li>
-                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
+                <?php if (!empty($_SESSION['is_admin'])) : ?>
+                    <li class="menu-deroulant admin">
+                        <img src="img/icon/user.png" alt="Utilisateur">
+                        <ul class="menu-deroulant-menu">
+                            <li><a href="php/admin/admin.php">Admin</a></li>
+                            <li><a href="php/admin/logout.php">Se déconnecter</a></li>
+                        </ul>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-user"><a href="php/admin/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>

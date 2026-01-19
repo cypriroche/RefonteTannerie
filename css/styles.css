@@ -77,6 +77,11 @@ nav ul li a:hover {
     color : #EA6B38;
 }
  
+.nav-user img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
 
 
 
@@ -90,6 +95,12 @@ nav ul li a:hover {
     margin-left: 5px;
 }
 
+.menu-deroulant img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #EA6B38;
+}
 
 /* menu deroulant avec un z-index pour qu'il reste au-dessus du reste (il est cache quand il n'y a pas de survol)*/
 .menu-deroulant-menu {
@@ -126,6 +137,8 @@ nav ul li a:hover {
     background-color: #343330;
     color: #ffffff;
 }
+
+
 
 
 
@@ -236,10 +249,4 @@ footer {
 .droit-d-auteurs p {
     font-size: 14px;
     color: #343330;
-}
-
-.nav-user img{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
 }

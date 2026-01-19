@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,24 +8,21 @@
     <link rel="icon" type="image/png" href="img/favicon.jpg">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/Services.css">
+    <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Nos services</title>
 </head>
 <body>
     <header>
         <a href="index.php" class="logo-header">
-          <!-- LOGO cliquable qui retourne à l'accueil -->
-          <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
+            <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
         <nav>
-            <!-- nav qui affiche le menu -->
             <ul>
                 <li><a href="programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
-                  <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
-                  <ul class="menu-deroulant-menu">
-                        <!-- menu déroulant -->
+                    <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
+                    <ul class="menu-deroulant-menu">
                         <li><a href="structure.php">La structure</a></li>
                         <li><a href="rse.php">RSE</a></li>
                         <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
@@ -31,7 +30,17 @@
                 </li>
                 <li><a href="services.php">Nos services</a></li>
                 <li><a href="nousTrouver.php">Nous trouver</a></li>
-                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
+                <?php if (!empty($_SESSION['is_admin'])) : ?>
+                    <li class="menu-deroulant admin">
+                        <img src="img/icon/user.png" alt="Utilisateur">
+                        <ul class="menu-deroulant-menu">
+                            <li><a href="php/admin/admin.php">Admin</a></li>
+                            <li><a href="php/admin/logout.php">Se déconnecter</a></li>
+                        </ul>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-user"><a href="php/admin/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
@@ -41,7 +50,7 @@
   <!-- introduction du haut de page -->
   <section class="section-bannière">
     <h1>Nos services</h1>
-      <img src="img/Nos services/banniere.webp" alt="bannière">
+      <img src="img/nosServices/banniere.webp" alt="bannière">
   </section>
 
     <p>

@@ -1,6 +1,6 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,17 +19,14 @@
 <body>
     <header>
         <a href="index.php" class="logo-header">
-            <!-- LOGO cliquable qui retourne à l'accueil -->
             <img src="img/logo-tannerie.png" alt="Logo La Tannerie" class="logo">
         </a>
         <nav>
-            <!-- nav qui affiche le menu -->
             <ul>
                 <li><a href="programmation.php">Programmation</a></li>
                 <li class="menu-deroulant">
                     <a href="tannerie.php">La Tannerie <span class="menu-deroulant-arrow">▼</span></a>
                     <ul class="menu-deroulant-menu">
-                        <!-- menu deroulant -->
                         <li><a href="structure.php">La structure</a></li>
                         <li><a href="rse.php">RSE</a></li>
                         <li><a href="actionsCulturelles.php">Actions culturelles</a></li>
@@ -37,21 +34,31 @@
                 </li>
                 <li><a href="services.php">Nos services</a></li>
                 <li><a href="nousTrouver.php">Nous trouver</a></li>
-                <li class="nav-user"><a href="connexionUtilisateur/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
+                <?php if (!empty($_SESSION['is_admin'])) : ?>
+                    <li class="menu-deroulant admin">
+                        <img src="img/icon/user.png" alt="Utilisateur">
+                        <ul class="menu-deroulant-menu">
+                            <li><a href="php/admin/admin.php">Admin</a></li>
+                            <li><a href="php/admin/logout.php">Se déconnecter</a></li>
+                        </ul>
+                    </li>
+                <?php else: ?>
+                    <li class="nav-user"><a href="php/admin/connexion.php" aria-label="Connexion"><img src="img/icon/user.png" alt="Connexion"></a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
     <main>
         <section class="section-bannière">
             <h1>La Tannerie</h1>
-            <img src="img/La Tannerie/Le lieu/La-Tannerie.png" alt="Collecte et recyclage des mégots">
+            <img src="img/laTannerie/leLieu/La-Tannerie.png" alt="Collecte et recyclage des mégots">
         </section>
 
         <h1 class="titre-rse-accueil">RSE</h1>
         <section class="liste-actions-rse">
             <article class="carte-action-rse">
                 <a href="page-megots.php" class="lien-action-rse">
-                    <img src="img/La Tannerie/Gestion-des-mégots.png" alt="Gestion des mégots"
+                    <img src="img/laTannerie/rse/Gestion-des-megots.png" alt="Gestion des mégots"
                         class="image-action-rse">
                     <h2 class="titre-action-rse">Gestion des mégots</h2>
                     <p class="texte-action-rse">
@@ -63,7 +70,7 @@
 
             <article class="carte-action-rse">
                 <a href="page-verres.php" class="lien-action-rse">
-                    <img src="img/La Tannerie/Gobelets-consignés.png" alt="Verres consignés"
+                    <img src="img/laTannerie/Gobelets-consignés.png" alt="Verres consignés"
                         class="image-action-rse">
                     <h2 class="titre-action-rse">Verres consignés</h2>
                     <p class="texte-action-rse">
@@ -75,7 +82,7 @@
 
             <article class="carte-action-rse">
                 <a href="page-toilette.php" class="lien-action-rse">
-                    <img src="img/La Tannerie/Papier toilette.png" alt="Papier toilette"
+                    <img src="img/laTannerie/rse/papierToilette.png" alt="Papier toilette"
                         class="image-action-rse">
                     <h2 class="titre-action-rse">Papier toilette</h2>
                     <p class="texte-action-rse">
@@ -93,7 +100,7 @@
 
         <section class="section-actions">
             <div class="conteneur-actions">
-                <img src="img/La Tannerie/Action-culturel---ateliers-d’initiation.png"
+                <img src="img/laTannerie/Action-culturel---ateliers-d’initiation.png"
                     alt="Ateliers d'initiation musicale" class="image-mise-en-avant">
 
                 <div class="texte-actions">

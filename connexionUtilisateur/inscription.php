@@ -1,3 +1,68 @@
+<?php
+include_once __DIR__ . '/../php/config.php';
+include_once __DIR__ . '/../php/poo/database.php';
+
+// $error = '';
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//     $email = trim($_POST['email']);
+//     $password = trim($_POST['password']);
+
+//     if (empty($email) || empty($password)) {
+//         $error = 'Tous les champs sont obligatoires.';
+//     } else {
+//         $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+//         $rows = $db->query('SELECT * FROM admin WHERE email = ? LIMIT 1', [$email]);
+//         if (empty($rows)) {
+//             $error = 'Email ou mot de passe invalide.';
+//         } else {
+//             $user = $rows[0];
+//             if (!isset($user['mot_de_passe'])) {
+//                 $error = 'Impossible de vérifier le mot de passe.';
+//             } elseif (!password_verify($password, $user['mot_de_passe'])) {
+//                 $error = 'Email ou mot de passe invalide.';
+//             } else {
+//                 // Connexion réussie
+//                 $_SESSION['user_id'] = $user['id'] ?? null;
+//                 // $_SESSION['user_nom'] = $user['nom'] ?? '';
+//                 $_SESSION['user_email'] = $user['email'] ?? $email;
+//                 // detecte rôle admin si présent
+//                 if (isset($user['droit']) && strtolower($user['droit']) === 'admin') {
+//                     $_SESSION['is_admin'] = true;
+//                 } else {
+//                     $_SESSION['is_admin'] = false;
+//                 }
+//                 header('Location: ../index.php');
+//                 exit;
+//             }
+//         }
+//     }
+// }
+$error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $nom = trim(filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING));
+  $email = trim(filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL));
+  $password = trim(filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW));
+
+  if (empty($nom) || empty($email) || empty($password)) {
+    $error = 'Tous les champs sont obligatoires.';
+  } else {
+    $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
+    // vérifier si l'email existe déjà
+    $exists = $db->query('SELECT id FROM utilisateurs WHERE email = ?', [$email]);
+    if (!empty($exists)) {
+      $error = 'Un compte avec cet email existe déjà.';
+    } else {
+      $hash = password_hash($password, PASSWORD_DEFAULT);
+      // insertion sécurisée
+      $db->query('INSERT INTO admin (nom, email, mot_de_passe, created_at) VALUES (?, ?, ?, NOW())', [$nom, $email, $hash]);
+      header('Location: connexion.php?registered=1');
+      exit;
+    }
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -42,17 +107,21 @@
       <div class="inscription">
         <h2>Créer un compte</h2>
 
-        <form>
+        <?php if (!empty($error)) : ?>
+          <p style="color: #c00;"><?php echo htmlspecialchars($error); ?></p>
+        <?php endif; ?>
+
+        <form method="post" action="">
           <p>Nom</p>
-          <input type="text">
+          <input type="text" name="nom" required>
 
           <p>Email</p>
-          <input type="email">
+          <input type="email" name="email" required>
 
           <p>Mot de passe</p>
-          <input type="password">
+          <input type="password" name="password" required>
 
-          <button>S’inscrire</button>
+          <button type="submit">S’inscrire</button>
         </form>
 
         <p class="pascompte">
