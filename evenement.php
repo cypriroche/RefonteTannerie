@@ -36,6 +36,7 @@
     </head>
     <body>
         <main>
+        <a href="admin.php" class="boutonRetour">×</a>
         <article class="carteEvenement">
             <div class="carteGauche">
                 <div class="conteneurVisuel">
