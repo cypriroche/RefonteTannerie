@@ -93,9 +93,10 @@ session_start();
         <?php
        
         // index pour alterner les cartes
-        foreach ($carteEvenements as $carteEvenement) :?>
+        foreach ($carteEvenements as $carteEvenement) :
+        $id = $carteEvenement['id_evenement']; ?>
                <div id="carteEvenement">
-
+                    
                </div>
 
             <!--  On rajoute la classe "inverse" quand la carte doit être inversée -->
