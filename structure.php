@@ -15,7 +15,6 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/structure.css">
     <title>La structure</title>
 </head>
 <body>
@@ -59,14 +58,14 @@ session_start();
     <main class="structure">
 
  <section class="section-bannière">
-      <h1>L’association</h1>
+      <h1 class="titreStructure">L’association</h1>
         <img src="img/structure/benevoles.webp" alt="bannière">
     </section>
 
     <!-- partie sur l'association -->
     <section class="section">
-      <h1>L’association</h1>
-      <p>
+      <h1 class="titreStructure">L’association</h1>
+      <p class="texteStructure">
         Inaugurée en 2001, La Tannerie est la première et la seule SMAC
         (Scène de Musiques Actuelles) du département de l’Ain.
         Chaque saison (septembre à juin), près de 150 concerts,
@@ -77,20 +76,20 @@ session_start();
 
     <!-- partie sur les bénévoles -->
     <section class="section">
-      <h1>Les bénévoles</h1>
+      <h1 class="titreStructure">Les bénévoles</h1>
 
-      <p>
+      <p class="texteStructure">
         Être bénévole pour La Truffe et les Oreilles, c’est participer
         activement à la vie des concerts : accueil, bar, backstage,
         technique, décoration, photographie ou information du public.
       </p>
 
-      <p>
+      <p class="texteStructure">
         Les bénévoles peuvent également s’engager au sein du
         Conseil d’Administration de l’association.
       </p>
 
-      <p>
+      <p class="texteStructure">
         <strong>Membres du CA 23/24 :</strong>
         <?php
         $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
@@ -103,12 +102,12 @@ session_start();
       </p>
     </section>
 
-    <div class="separateur-droite"></div>
+    <div class="separateurDroite"></div>
 
 
     <!-- partie salariés -->
     <section class="section centre">
-        <h1>Les salariés</h1>   
+        <h1 class="titreStructure">Les salariés</h1>   
         
         <div class="salariés">
 
@@ -131,12 +130,12 @@ session_start();
         </div>
     </section>
 
-    <div class="separateur-gauche"></div>
+    <div class="separateurGauche"></div>
 
 
     <!-- règlement -->
     <section class="section">
-      <h1>Le règlement</h1>
+      <h1 class="titreStructure">Le règlement</h1>
       <p>
         L’association La Truffe et les Oreilles fonctionne grâce
         à l’implication de ses bénévoles, salariés et membres.

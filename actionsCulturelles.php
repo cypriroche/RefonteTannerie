@@ -45,7 +45,7 @@
         </nav>
     </header>
 
-    <main class="conteneur">
+    <main class="conteneurActionsCulturelles">
         <section class="bloc-presentation">
             <h2 class="titre-principal">Actions culturelles</h2>
             <p class="introduction">
@@ -73,7 +73,7 @@
 
     <div class="separateurGauche"></div>
 
-    <div class="conteneur">
+    <div class="conteneurActionsCulturelles">
         <section class="focus-projets">
             <h3 class="titre-principal">Nos projets phares en cours :</h3>
             <div class="liste-accordeons">
