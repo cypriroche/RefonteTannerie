@@ -69,7 +69,7 @@
 
 
     <p><strong>Réservation uniquement par mail et 24h à l’avance :</strong>
-      <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
+      <a class="mailServices" href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
     </p>
 
     <p>
@@ -106,11 +106,11 @@
 
     <p>
       Plus de renseignements auprès de Jojo et Mosa :
-      <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
+      <a class="mailServices" href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
     </p>
   </section>
 
-    <div class="separateur-droite"></div>
+    <div class="separateurDroite"></div>
 
   <!-- capsules mao -->
   <section class="service">
@@ -135,11 +135,11 @@
 
     <p>
       <strong>Réservation obligatoire :</strong> au moins 2 semaines à l’avance par mail :
-      <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>
+      <a class="mailServices" href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>
     </p>
   </section>
 
-   <div class="separateur-gauche"></div>
+   <div class="separateurGauche"></div>
 
 
   <!--accompagnement -->
@@ -155,7 +155,7 @@
     </p>
   </section>
 
-    <div class="separateur-droite"></div>
+    <div class="separateurDroite"></div>
 
   <!-- les trufferies -->
   <section class="service">
