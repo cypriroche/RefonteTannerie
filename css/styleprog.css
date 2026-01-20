@@ -39,24 +39,6 @@ body {
     border-radius: 1rem;
 }
 
-/* Carte inversée */
-
-.carteEvenement.inverse {
-    grid-template-columns: 2fr 1fr;
-}
-
-.carteEvenement.inverse .carteGauche {
-    order: 2;
-}
-
-.carteEvenement.inverse .carteDroite {
-    order: 1;
-}
-
-.carteEvenement.inverse .prix {
-    left: 20px;
-    right: auto;
-}
 
 /*Zone avec image et infos clés*/
 

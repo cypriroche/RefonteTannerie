@@ -62,11 +62,11 @@ session_start();
             <span></span>
         </button>
   </header>
-  <script src="js/menu.js"></script>  
+  <script src="../../js/menu.js"></script>  
   <main>
   <a href="admin.php" class="boutonRetour">×</a>
 
-    <form action="../../API/recupererEvenement.php" method="GET" class="formulaireEvenement">
+    <form action="modificationEvenement.php" method="GET" class="formulaireEvenement">
         <h1 class="titreFormulaire">Evénement à modifier</h1>
         <label class="labelFormulaire" for="selectEvenement">Choisissez l'évènement à modifier</label><br>
         <select id="selectEvenement" name="id_evenement" class="optionsEvenement">
@@ -79,43 +79,41 @@ session_start();
             }
             ?>
         </select><br><br>
-
-        <button class="boutonFormulaire" type="submit"> Valider</button>
     </form>
 
-    <form action="../script/modif_evenement.php" method="POST" class="formulaireEvenement">
+    <form action="../script/modif_evenement.php" method="POST" class="formulaireEvenement modification" id="modification">
 
-        <h1 class="titreFormulaire">Ajouter un événement</h1>
+        <h1 class="titreFormulaire">Modifier un événement</h1>
             
         <label class="labelFormulaire" for="nomArtiste">Nom de l'artiste</label>
-        <input class="champFormulaire" type="text" id="nomArtiste" name="nomArtiste" value="<?php echo $modifEvenement['artiste']?>" required>
+        <input class="champFormulaire" type="text" id="nomArtiste" name="nomArtiste" value="" required>
 
         <!-- <label class="labelFormulaire" for="image">Image</label>
         <input class="champFormulaire" type="file" id="image" name="image" accept="image/*" required>
          -->
         <label class="labelFormulaire" for="image">Image</label>
-        <input class="champFormulaire" type="text" id="image" name="image" value="<?php echo $modifEvenement['visuel']?>" required>
+        <input class="champFormulaire" type="text" id="image" name="image" value="" required>
 
         <label class="labelFormulaire" for="date">Date</label>
-        <input class="champFormulaire" type="date" id="date" name="date" value="<?php echo $modifEvenement['date_evenement']?>" required>
+        <input class="champFormulaire" type="date" id="date" name="date" value="" required>
 
         <label class="labelFormulaire" for="heure">Heure</label>
-        <input class="champFormulaire" type="time" id="heure" name="heure" value="<?php echo $modifEvenement['heure_evenement']?>" required>
+        <input class="champFormulaire" type="time" id="heure" name="heure" value="" required>
 
         <label class="labelFormulaire" for="ouverture">Ouverture des portes</label>
-        <input class="champFormulaire" type="time" id="ouverture" name="ouverture" value="<?php echo $modifEvenement['heure_ouverture']?>">
+        <input class="champFormulaire" type="time" id="ouverture" name="ouverture" value="" required>
 
         <label class="labelFormulaire" for="infos">Informations</label>
-        <textarea class="champFormulaire" id="infos" name="infos" rows="4"><?php echo $modifEvenement['informations']?></textarea>
+        <textarea class="champFormulaire" id="infos" name="infos" rows="4"></textarea>
 
         <label class="labelFormulaire" for="signature">Signature</label>
-        <input class="champFormulaire" type="text" id="signature" name="signature" value="<?php echo $modifEvenement['signature']?>">
+        <input class="champFormulaire" type="text" id="signature" name="signature" value="" required>
 
         <label class="labelFormulaire" for="prix">Prix en € </label>
-        <input class="champFormulaire" type="number" id="prix" name="prix" value="<?php echo $modifEvenement['tarif_plein']?>" required>
+        <input class="champFormulaire" type="number" id="prix" name="prix" value="" required>
 
-        <input type="hidden" name="id_evenement" value="<?php echo $modifEvenement['id_evenement']; ?>">
-        <button type="submit" class="boutonFormulaire">Ajouter l'événement</button>
+        <input type="hidden" name="id_evenement" value="">
+        <button type="submit" class="boutonFormulaire">Modifier l'événement</button>
     </form>
 
   </main>
@@ -163,5 +161,8 @@ session_start();
           <p>© 2026 La Tannerie - Tous droits réservés</p>
         </div>
     </footer>
+
+    <script src="../../js/recup.js"></script>
+
 </body>
 </html>

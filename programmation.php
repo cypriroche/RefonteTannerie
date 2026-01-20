@@ -93,10 +93,7 @@ session_start();
         <?php
        
         // index pour alterner les cartes
-        $index = 0;
-        foreach ($carteEvenements as $carteEvenement) :
-            // Savoir si la carte est inversé
-               $isInverse = ($index % 2 === 1);?>
+        foreach ($carteEvenements as $carteEvenement) :?>
                <div id="carteEvenement">
 
                </div>
@@ -105,13 +102,13 @@ session_start();
             
                 
             
-            <?php $index++; ?>
+            
         <?php endforeach; ?>
 
 
         <script id="templateEvenements" type="text/html">
             {{#evenements}}
-            <article  class="carteEvenement<?= $isInverse ? ' inverse' : '' ?>">
+            <article  class="carteEvenement">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
                         <img src="img/logo.png" alt="Logo" class="logoCarte">
