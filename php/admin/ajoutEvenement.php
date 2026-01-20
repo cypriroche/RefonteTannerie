@@ -14,7 +14,6 @@ session_start();
   <title>Admin</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/styleadmin.css">
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 
