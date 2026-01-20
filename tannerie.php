@@ -10,7 +10,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/LaTannerie.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <title>Présentation</title>
@@ -99,7 +98,7 @@
         </section>
 
         <div class="conteneur-bouton-rse">
-            <a href="Les actions RSE.php" class="bouton-rse">En savoir plus</a>
+            <a href="rse.php" class="bouton-rse">En savoir plus</a>
         </div>
 
         <div class="separateur-droite"></div>
@@ -115,7 +114,9 @@
                         À travers divers projets, la Tannerie développe un programme de sensibilisation
                         et d‘initiatives musicales dans le but de rendre la culture accessible au plus grand nombre.
                     </p>
-                    <button class="bouton-plus">En savoir plus</button>
+                    <div class="conteneur-bouton">
+                        <a href="actionsCulturelles.php" class="bouton-plus">En savoir plus</a>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,12 +1,24 @@
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*GENERAL */
+/*--------------------------------------------------------------------------------------------------------*/
+
+/*TYPOGRAPHIES */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
 }
-/* pour que le site prenne toute la largeur de la fenêtre */
 
-/* on donne les fonts aux titres et aux paragraphes  */
+/* On donne les fonts aux titres et aux paragraphes  */
 body {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -22,7 +34,103 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Header */
+/* Boutons retour pour les évènements et la partie admin */
+
+.boutonRetour {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #EA6B38;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.boutonRetour:hover {
+    background-color: #EA6B38;
+}
+
+/*Bannières */ 
+.section-bannière {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.section-bannière img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.section-bannière h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Trade Winds";
+    font-size: 3rem;
+    font-weight: 1000;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+}
+
+/* Séparateurs */
+
+.separateurGauche, .separateurDroite {
+    height: 6px;
+    background: linear-gradient(to right, #EA6B38, #ffffff);
+    margin: 30px 0;
+    width: 70%;
+}
+
+.separateurDroite {
+    margin-left: auto;
+    background: linear-gradient(to right, #ffffff, #EA6B38);
+}
+
+/* Boutons classiques */
+
+.conteneur-bouton-rse {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.bouton-rse,
+.bouton-plus, .boutonAccueil {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 1rem;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.bouton-rse:hover,
+.bouton-plus:hover, .boutonAccueil:hover {
+    background-color: #EA6B38;
+    transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* HEADER */
+/*--------------------------------------------------------------------------------------------------------*/
+
 header {
     position: fixed;
     top: 0;
@@ -63,7 +171,6 @@ nav ul {
     align-items: center;
 }
 
-
 nav ul li a {
     text-decoration: none;
     color: #343330;
@@ -82,8 +189,6 @@ nav ul li a:hover {
     height: 32px;
     border-radius: 50%;
 }
-
-
 
 /* menu déroulant */
 .menu-deroulant {
@@ -140,7 +245,7 @@ nav ul li a:hover {
 
 
 /* -------------------------------------------------------------------------------------------------------- */
-/* Footer */
+/* FOOTER */
 /* -------------------------------------------------------------------------------------------------------- */
 footer {
     background-color: #ffffff;
@@ -242,83 +347,9 @@ footer {
     color: #343330;
 }
 
-/* Menu burger pour la version mobile responsive */
-
-.burger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.burger span {
-    width: 25px;
-    height: 3px;
-    background: #000;
-    border-radius: 2px;
-}
-
-/* media queries qui permettent le responsive */
-
-@media (max-width: 700px) {
-
-    .burger {
-        display: flex;
-        position: absolute;
-        top: 25px;
-        right: 20px;
-    }
-
-    /* menu qui est caché de base */
-    nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        flex-direction: column;
-    }
-
-    /* Menu visible quand le js ajoute .open */
-    nav.open {
-        display: flex;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 20px;
-    }
-
-    .menu-deroulant-menu {
-        display: none;
-        flex-direction: column;
-        padding-left: 10px;
-    }
-}
-
-/* Footer responsive */
-
-@media (max-width: 700px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .footer-menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .icones-reseaux {
-        justify-content: center;
-    }
-}
+/*--------------------------------------------------------------------------------------------------------*/
+/* RESPONSIVE HEADER ET FOOTER */
+/*--------------------------------------------------------------------------------------------------------*/
 
 /* Menu burger pour la version mobile responsive */
 
@@ -395,5 +426,708 @@ footer {
 
     .icones-reseaux {
         justify-content: center;
+    }
+}
+
+
+/*------------------------------------------------------------------------*/
+/* STYLE PAGE PROGRAMMATION */
+/*------------------------------------------------------------------------*/
+
+/* Liste des cartes */
+
+.listeCartes {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Carte avec image à gauche et texte à droite */
+
+.carteEvenement {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1100px;
+    width: 100%;
+    margin: 10px auto;
+    margin-bottom: 50px;
+    background-color: #EA6B38;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    border-radius: 1rem;
+}
+
+
+/*Zone avec image et infos clés*/
+
+.carteGauche {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+
+.conteneurVisuel {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border-radius: 0.6rem;
+}
+
+.visuelArtiste {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logoCarte {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 100px;
+    z-index: 10;
+    padding: 0.7rem;
+    background-color: #EA6B38;
+    border-radius: 0.4rem;
+}
+
+.nomArtiste {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    background-color: #EA6B38;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 0.4rem;
+    font-family: "Trade Winds";
+    font-size: 2rem;
+    margin: 0;
+    z-index: 5;
+}
+
+.infosCles {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.infosCles li {
+    border: solid 0.1rem white;
+    padding: 5px;
+    border-radius: 0.4rem;
+}
+
+.infosCles li.genre {
+    border-radius: 0.6rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 3px 6px;
+}
+
+/*Zone avec le texte et prix*/
+
+.carteDroite {
+    position: relative;
+    padding: 15px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ouverture {
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 1.3;
+    font-size: 1rem;
+}
+
+.signature {
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+.prix {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: 1000;
+    background-color: #EA6B38;
+    color: white;
+    padding: 8px 18px;
+    border: solid 0.5rem white;
+    border-radius: 3rem;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+    .carteEvenement {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carteEvenement.inverse .carteGauche {
+        order: 1;
+    }
+
+    .carteEvenement.inverse .carteDroite {
+        order: 2;
+    }
+
+    .prix {
+        align-self: center;
+    }
+}
+
+
+/*-------------------------------------------------------------------------*/
+/* STYLE PAGE ACCUEIL */ 
+/*-------------------------------------------------------------------------*/
+
+/* Général pour la page */ 
+
+.banniere {
+    max-width: 100%;
+}
+
+.titresAccueil {
+    font-family: "Trade Winds";
+    font-size: 3rem;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.boutonCentre {
+    display: flex;
+    justify-content: center;
+}
+
+/* Programmation de l'accueil */ 
+
+.carteAccueil {
+    display: grid;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    font-family: "Open Sans";
+    font-style: italic;
+    border-radius: 1rem;
+}
+
+.carteGaucheAccueil {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    padding: 15px;
+    background-color: #EA6B38;
+    border-radius: 1rem;
+}
+
+.listeCartesAccueil {
+    max-width: 1200px;   
+    margin: 4rem auto;        
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Article Tannerie de l'accueil */ 
+
+.tannerieAccueil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.articleTannerieGauche {
+    flex: 1 1 400px;
+}
+
+.articleTannerieGauche .imageTannerie {
+    width: 90%;
+    height: auto;
+    border-radius: 1rem;
+    display: block;
+}
+
+.articleTannerieDroite {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.texteTannerie {
+    font-family: "Open Sans";
+    font-size: 1.1rem;
+    color: #343330;
+}
+
+/* Services tannerie accueil */ 
+
+.listeServices {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.carteService {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: "Open Sans";
+}
+
+.imageService {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.titreService {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    color: #343330;
+}
+
+.texteService {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #343330;
+    flex-grow: 1;
+}
+
+/* Galerie accueil */
+
+.galerie {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.galerie img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s;
+}
+
+/* Partenaires de l'accueil */ 
+
+.partenaires {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.partenaires img {
+    height: 80px;
+    width: auto;
+    transition: transform 0.6s;
+    object-fit: contain;
+}
+
+.galerie img:hover, .partenaires img:hover {
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+/* Responsive Accueil */ 
+
+@media (max-width: 700px) {
+    .listeCartesAccueil, .listeServices, .galerie {
+        grid-template-columns: 1fr;
+    }
+
+    .partenaires {
+        flex-direction: column;
+    }
+
+    .partenaires img {
+        height: 60px;
+    }
+}
+
+
+/*-------------------------------------------------------------------------*/
+/* Filtre programmation */
+/*-------------------------------------------------------------------------*/
+
+.filtre {
+    margin: 16px auto;
+    max-width: 1100px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Open Sans", sans-serif;
+}
+.filtre label { 
+    font-weight:700; 
+    margin-right:6px; 
+}
+
+.filtre select, .filtre input[type="search"] {
+    padding:8px 10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:#fff;
+    color:#343330;
+}
+.filtre .btn { 
+    background:#EA6B38;
+    color:#fff; padding:8px 12px;
+    padding:8px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    border:none;
+    font-weight:700;
+}
+
+/*-------------------------------------------------------------------------*/
+/* Cartes évènement détaillées */
+/*-------------------------------------------------------------------------*/
+
+.enteteDate {
+    font-family: "Open Sans";
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #343330;
+    margin-bottom: 15px;
+}
+
+
+.enteteDate .barres {
+    color: #333333;
+    margin-right: 10px;
+    letter-spacing: -2px;
+}
+
+
+/* Bloc accessibilité pmr et tarifs */
+
+
+.blocInfosSup {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-style: normal;
+}
+
+
+.infoPmr {
+    font-weight: 600;
+}
+
+
+.grillePrixDetail {
+    text-align: right;
+    padding-top: 30px;
+}
+
+
+/* Bouton billetterie */
+
+
+.boutonBilletterie {
+    display: inline-block;
+    align-self: center;
+    background-color: white;
+    color: #343330;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 12px 35px;
+    border-radius: 50px;
+    margin-top: 25px;
+    font-family: "Open Sans";
+    letter-spacing: 1px;
+    transition: transform 0.2s ease;
+}
+
+
+.boutonBilletterie:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+
+/* Lien vers les cartes */
+
+#carteEvenement{
+display: flex ;
+align-items: center;
+flex-direction: column;
+}
+
+.lienCartes{
+    display: inline-block;
+    width: fit-content;      
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+}
+
+.lienCartes:hover .carteEvenement {
+     transition: transform  0.3s ease-in-out;
+    cursor: pointer;
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*-------------------------------------------------------------------------*/
+/* PARTIE ADMIN */
+/*-------------------------------------------------------------------------*/
+
+/*Style page de redirection vers les actions admin*/
+
+.actionsAdmin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  gap: 25px;
+}
+
+.actionBouton {
+  width: 350px;
+  padding: 18px 24px;
+  font-size: 20px;
+  border-radius: 40px;
+  background-color: #EA6B38;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionsAdmin a {
+  text-decoration: none;
+}
+
+
+.actionBouton::after {
+  content: "→";
+  font-size: 25px;
+}
+
+/* Formulaire pour ajouter un événement */
+
+
+.formulaireEvenement {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.formulaireEvenement.modification {
+  display: none;
+}
+
+.titreFormulaire {
+  font-family: "Trade Winds";
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.labelFormulaire {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Open Sans";
+  font-weight: 800;
+  color: #000000;
+}
+
+.champFormulaire {
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+
+.boutonFormulaire {
+  font-family: "Open Sans";
+    background-color: #EA6B38;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 35%;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.boutonFormulaire:hover {
+    background-color: #484444;
+}
+
+/* Formulaire pour supprimer un événement */
+
+.optionsEvenement {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 15px;
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+/*-------------------------------------------------------------------------*/
+/* STYLE TANNERIE */
+/*-------------------------------------------------------------------------*/
+
+/* SECTION : GRILLE DES ACTIONS RSE */
+
+.titre-rse-accueil {
+    font-family: "Trade Winds";
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #343330;
+}
+
+.liste-actions-rse {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    padding: 0 20px;
+}
+
+.carte-action-rse {
+    text-align: center;
+}
+
+.lien-action-rse {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+}
+
+.image-action-rse {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 15px;
+}
+
+.titre-action-rse {
+    font-family: "Open Sans";
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.texte-action-rse {
+    font-size: 0.95rem;
+    text-align: center;
+} 
+
+/* SECTION : ACTIONS CULTURELLES (BLOCK IMAGE + TEXTE) */
+.section-actions {
+    padding: 3rem 0;
+}
+
+.conteneur-actions {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-mise-en-avant {
+    flex: 1;
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.texte-actions {
+    flex: 1;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.texte-actions h2 {
+    font-family: "Trade Winds";
+    font-size: 2.5rem;
+}
+
+@media (max-width: 700px) {
+    .liste-actions-rse {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .image-action-rse {
+        height: 180px;
+    }
+    .conteneur-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .titre-action-rse, .texte-action-rse {
+        text-align: center;
+        font-size: 1rem;
     }
 }
