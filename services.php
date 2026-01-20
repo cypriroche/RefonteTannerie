@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="img/favicon.jpg">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Nos services</title>
 </head>
@@ -69,7 +68,7 @@
 
 
     <p><strong>Réservation uniquement par mail et 24h à l’avance :</strong>
-      <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
+      <a class="mailServices" href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
     </p>
 
     <p>
@@ -106,11 +105,11 @@
 
     <p>
       Plus de renseignements auprès de Jojo et Mosa :
-      <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
+      <a class="mailServices" href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>.
     </p>
   </section>
 
-    <div class="separateur-droite"></div>
+    <div class="separateurDroite"></div>
 
   <!-- capsules mao -->
   <section class="service">
@@ -135,11 +134,11 @@
 
     <p>
       <strong>Réservation obligatoire :</strong> au moins 2 semaines à l’avance par mail :
-      <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>
+      <a class="mailServices" href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>
     </p>
   </section>
 
-   <div class="separateur-gauche"></div>
+   <div class="separateurGauche"></div>
 
 
   <!--accompagnement -->
@@ -155,7 +154,7 @@
     </p>
   </section>
 
-    <div class="separateur-droite"></div>
+    <div class="separateurDroite"></div>
 
   <!-- les trufferies -->
   <section class="service">

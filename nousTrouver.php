@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/nousTrouver.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Nous trouver</title>
 </head>
@@ -51,11 +50,11 @@
         </button>
     </header>
     <script src="js/menu.js"></script>                 
-  <main class="container">
+  <main class="containerTrouver">
     <!-- contact -->
 
     <section class="contact">
-      <section class="banniereTrouver">
+      <section class="section-bannière">
         <h1>Nous trouver</h1>
           <img src="img/nousTrouver/banniere.webp" alt="bannière">
       </section>

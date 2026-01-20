@@ -44,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <title>Connexion</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/connexion.css">
   <link rel="stylesheet" href="../../css/styles.css">
 </head>
 
@@ -107,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p>Mot de passe</p>
                     <input type="password" name="password" class="connexionInput" required>
 
-                    <button class="btn-form" type="submit">Se connecter</button>
+                    <button class="bouton-plus" id="boutonConnexion" type="submit">Se connecter</button>
                 </form>
                  <?php
             if ($affichage == 1) {
