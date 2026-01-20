@@ -198,7 +198,7 @@
         </div>
 
         <section class="PourquoiRSE">
-            <div class="conteneur">
+            <div class="conteneurrse">
                 <h2 class="titre">Pourquoi s'y intéresser ?</h2>
                 <div class="grille-valeurs">
                     <p><strong>Nos Valeurs :</strong> Garantir l'accès à la culture pour tous et un fonctionnement
