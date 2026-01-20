@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="img/favicon.jpg">    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Nos services</title>
 </head>

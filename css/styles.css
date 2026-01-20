@@ -1531,6 +1531,41 @@ details[open] .fleche {
 }
 
 /*-------------------------------------------------------------------------*/
+/* STYLE PAGE SERVICES */
+/*-------------------------------------------------------------------------*/
+
+.service {
+  margin-bottom: 80px;
+}
+
+.service ul {
+  margin-left: 20px; /* décale la liste vers la droite */
+  margin-bottom: 16px;
+}
+
+/* vidéos youtube affichées côte à côte */
+.videos {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.videos iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+}
+
+.mailServices {
+  color: #EA6B38; 
+  text-decoration: none;
+}
+
+.mailServices:hover {
+  text-decoration: underline;
+}
+
+/*-------------------------------------------------------------------------*/
 /* STYLE PAGE NOUS TROUVER */
 /*-------------------------------------------------------------------------*/
 
@@ -1604,5 +1639,42 @@ a.mail:hover {
   text-decoration: underline;
 }
 
+/*-------------------------------------------------------------------------*/
+/* STYLE PAGE CONNEXION */
+/*-------------------------------------------------------------------------*/
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* ça place le titre au-dessus du formulaire */
+  align-items: center;
+  padding-top: 60px;
+}
 
+/* conteneur du formulaire */
+.seconnecter {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* bloc connexion/inscription */
+.connexion{
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+/* champs de formulaire */
+.connexionInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 22px;
+  border: none;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+}
+
+/* la largeur des champs va jusquau bouton se connecter/s'inscrire */
+input,
+.boutonConnexion{
+  box-sizing: border-box;
+}
