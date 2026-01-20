@@ -19,8 +19,7 @@ body {
 }
 
 /* bloc connexion/inscription */
-.connexion,
-.inscription {
+.connexion{
   background-color: #ffffff;
   padding: 40px;
 }
@@ -45,7 +44,7 @@ p {
 }
 
 /* champs de formulaire */
-input {
+.connexionInput {
   width: 100%;
   padding: 12px;
   margin-bottom: 22px;
@@ -54,7 +53,13 @@ input {
   font-size: 0.9rem;
 }
 
-button {
+
+
+
+/* CE BOUTON EST A METTRE aves les autres 
+tu peux changer le css ce n'est pas le bon
+met le avec btn-accueil dans styles etc... */
+.btn-form {
   width: 100%;
   padding: 12px;
   background-color: #343330;
@@ -63,25 +68,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn-form:hover {
   background-color: #EA6B38;
 }
 
-/* lien vers inscription/connexion */
-.pascompte {
-  margin-top: 25px;
-  text-align: center;
-  font-size: 0.85rem;
-}
 
-.pascompte a {
-  color: #EA6B38;
-  text-decoration: none;
-}
 
-.pascompte a:hover {
-  text-decoration: underline;
-}
 
 /* la largeur des champs va jusquau bouton se connecter/s'inscrire */
 input,

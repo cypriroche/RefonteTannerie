@@ -1,18 +1,18 @@
 /* ÉLÉMENTS RÉCURRENTS (SÉPARATEURS, BANNIÈRES) */
-.section-bannière {
+.banniereTrouver {
     position: relative;
     overflow: hidden;
     margin-bottom: 3rem;
 }
 
-.section-bannière img {
+.banniereTrouver img {
     width: 100%;
     height: 300px;
     object-fit: cover;
     display: block;
 }
 
-.section-bannière h1 {
+.banniereTrouver h1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -65,7 +65,7 @@ body {
   padding: 50px 20px; /* espace intérieur */
 }
 
-.section-bannière,
+.banniereTrouver,
 .separateur-gauche,
 .separateur-droite {
   width: 100vw;
@@ -136,13 +136,13 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* les liens */
-a {
+/* les liens spécifiques aux mails*/ 
+a.mail {
   color: #EA6B38;
   text-decoration: none;
 }
 
-a:hover {
+a.mail:hover {
   text-decoration: underline;
 }
 

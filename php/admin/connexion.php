@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <span></span>
         </button>
   </header>
-  <script src="js/menu.js"></script>
+  <script src="../../js/menu.js"></script>
   <main>
   <div class="page">
 
@@ -102,12 +102,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <form method="post" action="">
                     <p>Email</p>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" class="connexionInput" required>
 
                     <p>Mot de passe</p>
-                    <input type="password" name="password" required>
+                    <input type="password" name="password" class="connexionInput" required>
 
-                    <button type="submit">Se connecter</button>
+                    <button class="btn-form" type="submit">Se connecter</button>
                 </form>
                  <?php
             if ($affichage == 1) {

@@ -55,7 +55,7 @@
     <!-- contact -->
 
     <section class="contact">
-      <section class="section-bannière">
+      <section class="banniereTrouver">
         <h1>Nous trouver</h1>
           <img src="img/nousTrouver/banniere.webp" alt="bannière">
       </section>
@@ -67,7 +67,7 @@
 
       <p class="contact-symbole">
         <img src="img/icon/email.png" alt="Email">
-        <a href="mailto:repetitions@la-tannerie.com">
+        <a class="mail" class="mail" href="mailto:repetitions@la-tannerie.com">
           repetitions@la-tannerie.com
         </a>
       </p>
@@ -110,59 +110,59 @@
         <li>
           <strong>Directeur :</strong> 
           Gilles GARRIGOS – 
-          <a href="mailto:direction@la-tannerie.com">direction@la-tannerie.com</a>
+          <a class="mail" href="mailto:direction@la-tannerie.com">direction@la-tannerie.com</a>
         </li>
         <li>
           <strong>Programmation :</strong>
           Ann HUITON – 
-           <a href="mailto:progtannerie@la-tannerie.com">progtannerie@la-tannerie.com</a>
+           <a class="mail" href="mailto:progtannerie@la-tannerie.com">progtannerie@la-tannerie.com</a>
           </li>
         <li>
           <strong>Directeur technique :</strong> 
           PEYOT – 
-          <a href="mailto:regie@la-tannerie.com">regie@la-tannerie.com</a>
+          <a class="mail" href="mailto:regie@la-tannerie.com">regie@la-tannerie.com</a>
         </li>
         <li>
           <strong>Action culturelle :</strong> 
           Julie RUDELIN – 
-          <a href="mailto:actionculturelle@la-tannerie.com">actionculturelle@la-tannerie.com</a>
+          <a class="mail" href="mailto:actionculturelle@la-tannerie.com">actionculturelle@la-tannerie.com</a>
         </li>
         <li>
           <strong>Communication :</strong> 
           Alexandra Leroi – 
-          <a href="mailto:communication@la-tannerie.com">communication@la-tannerie.com</a>
+          <a class="mail" href="mailto:communication@la-tannerie.com">communication@la-tannerie.com</a>
         </li>
         <li>
           <strong>Administration :</strong> Virginie MICHEL – 
-          <a href="mailto:admin@la-tannerie.com">admin@la-tannerie.com</a>
+          <a class="mail" href="mailto:admin@la-tannerie.com">admin@la-tannerie.com</a>
         </li>
         <li>
           <strong>Accueil / Billetterie :</strong> Elodie PLASSARD – 04 74 21 04 55 – 
-          <a href="mailto:accueil@la-tannerie.com">accueil@la-tannerie.com</a>
+          <a class="mail" href="mailto:accueil@la-tannerie.com">accueil@la-tannerie.com</a>
         </li>
         <li>
           <strong>Bénévoles : </strong>
-          <a href="mailto:benevoles@la-tannerie.com">benevoles@la-tannerie.com</a>
+          <a class="mail" href="mailto:benevoles@la-tannerie.com">benevoles@la-tannerie.com</a>
         </li>
         <li>
           <strong>Développement durable : </strong>
-          <a href="mailto:developpement.durable@la-tannerie.com">developpement.durable@la-tannerie.com</a>
+          <a class="mail" href="mailto:developpement.durable@la-tannerie.com">developpement.durable@la-tannerie.com</a>
         </li>
         <li>
           <strong>Café de la Tannerie :</strong> Maëlle – 
-          <a href="mailto:barlatannerie@la-tannerie.com">barlatannerie@la-tannerie.com</a>
+          <a class="mail" href="mailto:barlatannerie@la-tannerie.com">barlatannerie@la-tannerie.com</a>
         </li>
         <li>
           <strong>Programmation Café :</strong> 
-          <a href="mailto:cafeculturel@la-tannerie.com">cafeculturel@la-tannerie.com</a>
+          <a class="mail" href="mailto:cafeculturel@la-tannerie.com">cafeculturel@la-tannerie.com</a>
         </li>
         <li>
           <strong>Locaux de répétitions :</strong> Jordane GAILLARD / Damien LATRACHE – 04 74 21 91 48 – 
-          <a href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>
+          <a class="mail" href="mailto:repetitions@la-tannerie.com">repetitions@la-tannerie.com</a>
         </li>
         <li>
           <strong>Gaëtan Robin (Régie technique) :</strong> 
-          <a href="mailto:technique@la-tannerie.com">technique@la-tannerie.com</a>
+          <a class="mail" href="mailto:technique@la-tannerie.com">technique@la-tannerie.com</a>
         </li>
       </ul>
     </section>
@@ -173,7 +173,7 @@
         
         <div class="footer-container">
             <div class="logo-container">
-            <a href="index.php">
+            <a class="mail" href="index.php">
                 <img src="img/logo-tannerie.png" alt="Logo La tannerie Bourg en Bresse">
             </a>
             </div>
@@ -181,28 +181,28 @@
             <!-- menu footer -->
             <div class="footer-menu">
                 <ul>
-                    <li><a href="programmation.php">Programmation</a></li>
-                    <li><a href="tannerie.php">La Tannerie</a></li>
-                    <li><a href="services.php">Nos services</a></li>
-                    <li><a href="nousTrouver.php">Nous trouver</a></li>
+                    <li><a class="mail" href="programmation.php">Programmation</a></li>
+                    <li><a class="mail" href="tannerie.php">La Tannerie</a></li>
+                    <li><a class="mail" href="services.php">Nos services</a></li>
+                    <li><a class="mail" href="nousTrouver.php">Nous trouver</a></li>
                 </ul>
             </div>
             
            <!-- icon résaux sociaux -->
             <div class="icones-reseaux">
-                <a href="https://www.facebook.com/latannerie" aria-label="Facebook">
+                <a class="mail" href="https://www.facebook.com/latannerie" aria-label="Facebook">
                     <img src="img/icon/facebook-icon.png" alt="Facebook">
                 </a>
-                <a href="https://x.com/LaTannerie" aria-label="X">
+                <a class="mail" href="https://x.com/LaTannerie" aria-label="X">
                     <img src="img/icon/x-icon.png" alt="X">
                 </a>
-                <a href="https://www.youtube.com/channel/UCxKtBCxXr0KrnHim09zdMuA" aria-label="Youtube">
+                <a class="mail" href="https://www.youtube.com/channel/UCxKtBCxXr0KrnHim09zdMuA" aria-label="Youtube">
                     <img src="img/icon/youtube-icon.png" alt="Youtube">
                 </a>
-                <a href="https://www.facebook.com/latannerie" aria-label="Tiktok">
+                <a class="mail" href="https://www.facebook.com/latannerie" aria-label="Tiktok">
                     <img src="img/icon/tiktok-icon.png" alt="Tiktok">
                 </a>
-                <a href="https://www.instagram.com/latannerie01/" aria-label="Instagram">
+                <a class="mail" href="https://www.instagram.com/latannerie01/" aria-label="Instagram">
                     <img src="img/icon/instagram-icon.png" alt="Instagram">
                 </a>
             </div>
