@@ -60,7 +60,7 @@ session_start();
             <span></span>
         </button>
     </header>
-    <script src="js/menu.js"></script>  
+    <script src="../../js/menu.js"></script>  
   <main>
         <a href="admin.php" class="boutonRetour">×</a>
         <form action="../script/sup_evenement.php" method="post" class="formulaireEvenement">

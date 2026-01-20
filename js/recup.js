@@ -1,8 +1,6 @@
 // nos fonctions
 
 let artiste;
-let selectEvenement;
-let idEvenement;
 let image;
 let date;
 let heure;
@@ -10,7 +8,7 @@ let ouverture;
 let infos;
 let signature;
 let prix;
-
+let id;
 let form;
 
 // fonction qui efface le contenu de la div ressources
@@ -23,13 +21,8 @@ let form;
 function recupererEvenement(idEvenement){
 	// requete AJAX
 	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "../../API/recupererEvenement.php?idevenement="+idEvenement, true);
+	xhttp.open("GET", "../../API/recupererEvenement.php?id_evenement="+idEvenement, true);
 	xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    console.log(
-        'readyState:', this.readyState,
-        'http status:', this.status,
-        'response:', this.responseText
-    );
 	xhttp.onreadystatechange = function() {
 	   if (this.readyState == 4 && this.status == 200) {
 		  // Response
@@ -55,7 +48,8 @@ function recupererEvenement(idEvenement){
                 signature.value = response["evenement"]["signature"];
                 prix=document.getElementById('prix');
                 prix.value = response["evenement"]["tarif_plein"];
-                document.getElementsByName('id_evenement')[0].value = response["evenement"]["id_evenement"];
+                id=document.getElementById('id_evenement')
+                id.value = response["evenement"]["id_evenement"];
 
 		 }  
  
@@ -70,15 +64,15 @@ function recupererEvenement(idEvenement){
 
 // on ajoute un écouteur à cet élément
 function chargerEvenements() {
-    idEvenement = this.value
+    let idEvenement = this.value ||" ";
 
     recupererEvenement(idEvenement);
-    form.style.display = "block";
+form.classList.add("actif");
 }
 
 function init(){
 	// on recupere l'element selectSAE et on ajoute l'écouteur
-	selectEvenement=document.getElementById('selectEvenement');
+	let selectEvenement=document.getElementById('selectEvenement');
 	selectEvenement.addEventListener('change', chargerEvenements);
 
     form=document.getElementById('modification');

@@ -24,7 +24,7 @@ else{
 	
 	
 	// recherche de de l'événement
-	$requete='SELECT * FROM evenement WHERE id='.$id_evenement;
+	$requete='SELECT * FROM evenement WHERE id_evenement='.$id_evenement;
 
 	$resultats= $conn -> query($requete);
 	$evenement = $resultats->fetch(PDO::FETCH_ASSOC);

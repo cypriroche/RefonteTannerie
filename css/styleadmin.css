@@ -73,6 +73,9 @@
 .formulaireEvenement.modification {
   display: none;
 }
+.formulaireEvenement.modification.actif {
+  display: block;
+}
 
 .titreFormulaire {
   font-family: "Trade Winds";

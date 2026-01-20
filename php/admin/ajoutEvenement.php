@@ -55,7 +55,7 @@ session_start();
             <span></span>
         </button>
   </header>
-  <script src="js/menu.js"></script>  
+  <script src="../../js/menu.js"></script>  
     <main>
         <a href="admin.php" class="boutonRetour">×</a>
         <form action="../script/add_evenement.php" method="POST" class="formulaireEvenement" enctype="multipart/form-data">
@@ -75,10 +75,10 @@ session_start();
             <input class="champFormulaire" type="date" id="date" name="date" required>
 
             <label class="labelFormulaire" for="heure">Heure</label>
-            <input class="champFormulaire" type="time" id="heure" name="heure" required>
+            <input class="champFormulaire" type="text" id="heure" name="heure" placeholder="20h30" required>
 
             <label class="labelFormulaire" for="ouverture">Ouverture des portes</label>
-            <input class="champFormulaire" type="time" id="ouverture" name="ouverture">
+            <input class="champFormulaire" type="text" id="ouverture" name="ouverture" placeholder="19h30">
 
             <label class="labelFormulaire" for="infos">Informations</label>
             <textarea class="champFormulaire" id="infos" name="infos" rows="4"></textarea>

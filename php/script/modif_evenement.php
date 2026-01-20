@@ -25,7 +25,7 @@ $prix = $_POST['prix'] ?? 0;
 $id = $_POST['id_evenement'] ?? $_POST['id_cont'] ?? null;
 
 if ($id === null) {
-        header('Location:../admin/admin.php?status=modified');
+        header('Location:../admin/admin.php?status=error_no_id');
         exit();
 }
 

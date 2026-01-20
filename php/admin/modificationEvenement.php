@@ -1,6 +1,7 @@
 <?php
-require_once __DIR__ . '/../config.php';
-require_once __DIR__ . '/../poo/database.php';
+include '../config.php';
+include '../poo/database.php';
+
 session_start();
 
 // Connexion à la base de données 
@@ -98,10 +99,10 @@ session_start();
         <input class="champFormulaire" type="date" id="date" name="date" value="" required>
 
         <label class="labelFormulaire" for="heure">Heure</label>
-        <input class="champFormulaire" type="time" id="heure" name="heure" value="" required>
+        <input class="champFormulaire" type="text" id="heure" name="heure" value="" required>
 
         <label class="labelFormulaire" for="ouverture">Ouverture des portes</label>
-        <input class="champFormulaire" type="time" id="ouverture" name="ouverture" value="" required>
+        <input class="champFormulaire" type="text" id="ouverture" name="ouverture" value="" required>
 
         <label class="labelFormulaire" for="infos">Informations</label>
         <textarea class="champFormulaire" id="infos" name="infos" rows="4"></textarea>
@@ -112,7 +113,7 @@ session_start();
         <label class="labelFormulaire" for="prix">Prix en € </label>
         <input class="champFormulaire" type="number" id="prix" name="prix" value="" required>
 
-        <input type="hidden" name="id_evenement" value="">
+        <input type="hidden" class="champFormulaire" id="id_evenement" name="id_evenement" value="">
         <button type="submit" class="boutonFormulaire">Modifier l'événement</button>
     </form>
 

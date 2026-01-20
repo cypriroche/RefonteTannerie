@@ -55,13 +55,14 @@ session_start();
             <span></span>
         </button>
   </header>
-  <script src="js/menu.js"></script>
+  <script src="../../js/menu.js"></script>
     <main>
     <?php if (!empty($_GET['status'])):
                 $msg = '';
                 if ($_GET['status'] === 'deleted') $msg = 'Suppression réussie';
                 elseif ($_GET['status'] === 'added') $msg = 'Ajout réussi';
                 elseif ($_GET['status'] === 'modified') $msg = 'Modification réussie';
+                elseif ($_GET['status'] === 'error_no_id') $msg = "Erreur : ID de l'événement manquant.";
     ?>
         <div class="flash-message" style="background:#d4edda;color:#155724;padding:10px;border-radius:4px;margin:16px 0;">
                 <?php echo htmlspecialchars($msg); ?>
