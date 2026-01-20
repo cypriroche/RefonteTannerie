@@ -1529,3 +1529,80 @@ summary {
 details[open] .fleche {
     transform: rotate(90deg);
 }
+
+/*-------------------------------------------------------------------------*/
+/* STYLE PAGE NOUS TROUVER */
+/*-------------------------------------------------------------------------*/
+
+/* container qui centre le contenu et limite la largeur */
+.containerTrouver {
+  max-width: 1100px;
+  /* margin: 0 auto; centre horizontalement */
+  margin: 100px auto 0 auto;
+  padding: 50px 20px; /* espace intérieur */
+}
+
+/* espace entre section contact et map */
+.contact {
+  margin-bottom: 60px;
+}
+
+/* aligne icône et texte de contact sur une même ligne */
+.contact-symbole {
+  display: flex; /* permet d’aligner image + texte */
+  align-items: center; /* centre verticalement */
+  margin-bottom: 12px;
+}
+
+/* taille icônes */
+.contact-symbole img {
+  width: 22px;
+  height: auto;
+  margin-right: 10px; /* espace entre icône et texte */
+}
+
+/* map */
+.contact-map {
+  margin-top: 40px;
+}
+
+.map {
+  width: 100%;
+  max-width: 1000px; 
+  height: 360px;
+  border: none;
+  margin: 0 auto; /* centre la carte */
+  display: block;
+}
+
+/* espace sous la section points de vente */
+.points-vente {
+  margin-bottom: 60px;
+}
+
+.points-vente p {
+  max-width: 800px;
+}
+
+.contact-membres ul {
+  list-style: none; 
+  max-width: 900px;
+}
+
+/* espacement entre chaque contact */
+.contact-membres li {
+  margin-bottom: 10px;
+}
+
+/* les liens spécifiques aux mails*/ 
+a.mail {
+  color: #EA6B38;
+  text-decoration: none;
+}
+
+a.mail:hover {
+  text-decoration: underline;
+}
+
+
+

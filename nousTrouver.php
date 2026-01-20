@@ -51,11 +51,11 @@
         </button>
     </header>
     <script src="js/menu.js"></script>                 
-  <main class="container">
+  <main class="containerTrouver">
     <!-- contact -->
 
     <section class="contact">
-      <section class="banniereTrouver">
+      <section class="section-bannière">
         <h1>Nous trouver</h1>
           <img src="img/nousTrouver/banniere.webp" alt="bannière">
       </section>
