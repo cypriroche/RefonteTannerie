@@ -1678,3 +1678,118 @@ input,
 .boutonConnexion{
   box-sizing: border-box;
 }
+
+/*------------------------------------------------------------
+ PAGE RGPD
+------------------------------------------------------------*/
+
+
+.titre-sur-image {
+    font-family: "Trade Winds", cursive;
+    color: #ffffff;
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    padding: 0 40px;
+    line-height: 1.2;
+}
+
+.fondNoir {
+    background-color: #000000;
+    padding: 60px 0;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------------------------------------------------------------
+3. TITRES ET TEXTES DE PRÉSENTATION
+------------------------------------------------------------*/
+.bloc-presentation {
+    padding: 60px 0 20px 0;
+    text-align: center;
+}
+
+.liste-accordeonsRGPD {
+    margin-bottom: 60px;
+}
+
+.detailsRGPD {
+    border: 1px solid #343330;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.summaryRGPD {
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    /* Cache la flèche par défaut sur certains navigateurs */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.summaryRGPD:hover {
+    background-color: #EA6B38;
+    color: #ffffff;
+}
+
+.DescriptionAction {
+    padding: 25px;
+    background-color: #fdfdfd;
+    border-top: 1px solid #eee;
+    line-height: 1.6;
+}
+
+.DescriptionAction ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.DescriptionAction li {
+    margin-bottom: 8px;
+}
+
+/*------------------------------------------------------------
+5. SECTION CONTACT (STYLE "POURQUOI RSE")
+------------------------------------------------------------*/
+.QuestionsRGPD {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    margin-top: 40px;
+}
+
+.QuestionsRGPD .titre {
+    font-family: "Trade Winds", cursive;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.grilleValeurs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.grilleValeurs p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.grilleValeurs strong {
+    color: #EA6B38;
+    display: block;
+    margin-bottom: 5px;
+}
+
