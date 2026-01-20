@@ -93,8 +93,7 @@ session_start();
         <?php
        
         // index pour alterner les cartes
-        foreach ($carteEvenements as $carteEvenement) :
-        $id = $carteEvenement['id_evenement']; ?>
+        foreach ($carteEvenements as $carteEvenement) : ?>
                <div id="carteEvenement">
                     
                </div>
@@ -109,6 +108,7 @@ session_start();
 
         <script id="templateEvenements" type="text/html">
             {{#evenements}}
+            <a href="evenement.php?id={{id_evenement}}" class="lienCartes">
             <article  class="carteEvenement">
                 <div class="carteGauche">
                     <div class="conteneurVisuel">
@@ -131,6 +131,7 @@ session_start();
                     <div class="prix">{{tarif_plein}} €</div>
                 </div>
                 </article>
+                </a>
             {{/evenements}}
         </script>
 

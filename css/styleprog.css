@@ -500,14 +500,23 @@ body {
 
 /* Lien vers les cartes */
 
-
-.lienCartes {
-    display: block;        
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s
+div#carteEvenement{
+display: flex ;
+align-items: center;
+flex-direction: column;
 }
 
+.lienCartes{
+    display: inline-block;
+    width: fit-content;      
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+}
+.lienCartes:hover .carteEvenement {
+    transition: transform  0.3s ease-in-out;
+
+}
 
 .lienCartes:hover .carteEvenement {
     cursor: pointer;

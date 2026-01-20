@@ -38,10 +38,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Trade+Winds&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/styleprog.css">
+        <link rel="stylesheet" href="css/styleadmin.css">
+
         <title>Événement</title>
     </head>
     <body>
         <main>
+        <a href="programmation.php" class="boutonRetour">×</a>
+
         <article class="carteEvenement">
             <div class="carteGauche">
                 <div class="conteneurVisuel">
