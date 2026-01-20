@@ -1423,3 +1423,109 @@ details[open] summary {
     font-weight: 600;
 }
 
+/*-------------------------------------------------------------------------*/
+/* STYLE PAGE ACTIONS CULTURELLES */
+/*-------------------------------------------------------------------------*/
+
+
+.conteneurActionsCulturelles {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* TITRES ET CONTENU */
+
+.titre-principal {
+    font-family: "Trade Winds", cursive;
+    font-size: 2.5rem;
+    margin: 40px 0 20px 0;
+}
+
+.introduction {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* GRILLE ET CARTES */
+.grille-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.carte-simple {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #EA6B38;
+    /* Petite touche de couleur sur le côté */
+    transition: transform 0.3s;
+}
+
+.carte-simple:hover {
+    transform: translateY(-5px);
+}
+
+.carte-simple h3 {
+    margin-top: 0;
+    color: #EA6B38;
+}
+
+details {
+    border: 1px solid #343330;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+summary {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+summary:hover {
+    background: #EA6B38;
+    color: white;
+}
+
+.contenu-texte {
+    padding: 20px;
+    background: #fdfdfd;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .section-banniere {
+        height: 300px;
+    }
+    .titre-sur-image {
+        font-size: 2rem;
+    }
+}
+
+summary {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+
+.fleche {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+details[open] .fleche {
+    transform: rotate(90deg);
+}
