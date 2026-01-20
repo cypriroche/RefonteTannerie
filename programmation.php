@@ -73,10 +73,19 @@ session_start();
     <label for="style">Style</label>
     <select id="style" name="style">
       <option value="">Tous</option>
-        <?php foreach ($carteEvenements as $carteEvenement) {
-                // la valeur de l'option est l'id de l'événement et le texte affiché est le nom de l'artiste
-                echo '<option value="'.$carteEvenement['style'].'">'.$carteEvenement['style'].'</option>';
-            }    ?>
+        <!-- permet que les styles ne s'ajoutent pas en double dans le filtre -->
+     
+    <?php
+    $stylesVus = [];
+        foreach ($carteEvenements as $carteEvenement) {
+        $style = $carteEvenement['style'];
+        if (isset($stylesVus[$style])) {
+            continue;
+        }
+        $stylesVus[$style] = true;
+        echo '<option value="'.$style.'">'.$style.'</option>';
+        }
+    ?>
     </select>
 
     <label for="artiste">Artiste</label>
