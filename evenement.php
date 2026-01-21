@@ -93,11 +93,6 @@
                         <div class="prix-ligne">Tarif réduit : <strong><?php echo $carteEvenement['tarif_reduit']; ?> €</strong></div>
                     </div>
                 </div>
-
-
-                <div class="copyright">
-                    <p>© 2026 La Tannerie - Tous droits réservés - <a class="mentions-legales" href="mentionsLegales.php">Mentions légales</a></p>
-                </div>
             </div>
         </article>
         </main>
