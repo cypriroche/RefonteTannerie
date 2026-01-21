@@ -254,8 +254,8 @@
         </div>
 
         <!-- informations sur les droits d'auteurs -->
-        <div class="droit-d-auteurs">
-            <p>© 2026 La Tannerie - Tous droits réservés</p>
+        <div class="copyright">
+            <p>© 2026 La Tannerie - Tous droits réservés - <a class="mentions-legales" href="mentionsLegales.php">Mentions légales</a></p>
         </div>
     </footer>
 </body>

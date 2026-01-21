@@ -1,84 +1,56 @@
 <?php
 /*
-Cette API permet d'envoyer les ressources d'une SAE dont l'identifiant a été transmis par la méthode GET
+Cette API permet d'envoyer les infos d'une évenement dont l'identifiant a été transmis par la méthode GET
 sous la forme d'un message encodé en JSON
 status :
     PB en cas de souci
     OK sinon
-sae
-  intitule
-    l'intitulé de la SAE en question
-ressources
-    la liste des ressources (id, intitule et semestre)
+
 */
-// Empêcher toute sortie HTML non contrôlée (warnings, notices)
-ini_set('display_errors', 0);
-error_reporting(0);
-header('Content-Type: application/json; charset=utf-8');
-ob_start();
+
 
 $donnees = [ 'status' => 'PAS DE EVENEMENT', 'evenements' => [] ];
 
-
-// if (!isset($_GET["artiste"]) && !isset($_GET["style"])) {
-//     // recherche de de l'événement
-//     $requete='SELECT * FROM evenement';
-// }
-// elseif(!isset($_GET["style"]) && isset($_GET["artiste"])) {
-//     $artiste=$_GET["artiste"];
-//     $requete='SELECT * FROM evenement 
-//     WHERE artiste LIKE "%'.$artiste.'%"';
-// }
-// elseif(isset($_GET["style"]) && !isset($_GET["artiste"])) {
-//     $style=$_GET["style"];
-//     $requete='SELECT * FROM evenement 
-//     WHERE style LIKE "%'.$style.'%"';
-// }
-// else{
-//     // recherche de l'événement filtré
-//     $artiste=$_GET["artiste"];
-//     $style=$_GET["style"];
-//     $requete='SELECT * FROM evenement
-//     WHERE artiste LIKE "%'.$artiste.'%" 
-//     AND style LIKE "%'.$style.'%"';
-// }
-    
-   
-    
-    
-    $donnees["status"]="OK";
+$donnees["status"]="OK";
 
 
-	// pour se connecter à la base de données
-	include("../php/config.php");
-	include("../php/poo/database.php");
+// pour se connecter à la base de données
+include("../php/config.php");
+include("../php/poo/database.php");
 
-	try {
+try {
+    // Connexion à la base de données
     $db = Database::getInstance(DB_HOST, DB_NAME, DB_USER, DB_PASS, DB_CHARSET);
     $pdo = $db->getConnection();
 
+    // Préparation de la requête avec filtres
     $sql = "SELECT * FROM evenement WHERE 1=1";
     $params = [];
 
+    // on rajoute les filtres de style si ils sont présents
     if (!empty($_GET['style'])) {
         $sql .= " AND style LIKE :style";
         $params[':style'] = '%' . $_GET['style'] . '%';
     }
 
+    // on rajoute aussi dans la reaquête le filtre par artiste si il est présent
     if (!empty($_GET['artiste'])) {
         $sql .= " AND artiste LIKE :artiste";
         $params[':artiste'] = '%' . $_GET['artiste'] . '%';
     }
 
+    // exécution de la requête
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
 
 
+    // récupération des résultats
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $donnees['evenements'] = $rows;
     $donnees['status'] = 'OK';
 
 } catch (Exception $e) {
+    // en cas de problème
     $donnees['status'] = 'PB';
     $donnees['evenements'] = [];
 }
@@ -93,8 +65,4 @@ $donneesJson = json_encode($donnees, JSON_HEX_APOS);
 $donneesJson = str_replace("\\n", " ", $donneesJson); 
 
 // on écrit les données 
-// nettoyer le tampon de sortie éventuel et renvoyer uniquement le JSON
-if (ob_get_length() !== false) {
-    ob_end_clean();
-}
 echo $donneesJson;

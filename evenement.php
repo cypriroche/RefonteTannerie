@@ -95,8 +95,8 @@
                 </div>
 
 
-                <div class="conteneur-bouton">
-                    <a href="#" class="boutonBilletterie">BILLETTERIE</a>
+                <div class="copyright">
+                    <p>© 2026 La Tannerie - Tous droits réservés - <a class="mentions-legales" href="mentionsLegales.php">Mentions légales</a></p>
                 </div>
             </div>
         </article>

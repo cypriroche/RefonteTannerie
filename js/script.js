@@ -75,6 +75,7 @@ function init(){
 	selectStyle=document.getElementById('style');
 	selectStyle.addEventListener('change', chargerEvenements);
 
+	// 	on récupere l'élément inputArtiste et on ajoute l'écouteur
 	inputArtiste=document.getElementById('artiste');
 	inputArtiste.addEventListener('change', chargerEvenements);
 

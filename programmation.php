@@ -173,8 +173,8 @@ session_start();
                 </a>
             </div>
         </div>
-        <div class="droit-d-auteurs">
-            <p>© 2026 La Tannerie - Tous droits réservés</p>
+        <div class="copyright">
+            <p>© 2026 La Tannerie - Tous droits réservés - <a class="mentions-legales" href="mentionsLegales.php">Mentions légales</a></p>
         </div>
     </footer>
 

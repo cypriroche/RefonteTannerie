@@ -31,7 +31,7 @@ function recupererEvenement(idEvenement){
 		  if(response["status"]=="OK"){
                 console.log("idEvenement");
 
-           
+                // remplir les champs du formulaire en changeant leur valeur
                 artiste=document.getElementById('nomArtiste');
                 artiste.value = response["evenement"]["artiste"];
                 image=document.getElementById('image');
@@ -67,7 +67,8 @@ function chargerEvenements() {
     let idEvenement = this.value ||" ";
 
     recupererEvenement(idEvenement);
-form.classList.add("actif");
+    // faire apparaître le formulaire en changeant sa classe (la classe actif a un display:block dans le CSS)
+    form.classList.add("actif");
 }
 
 function init(){
@@ -75,12 +76,8 @@ function init(){
 	let selectEvenement=document.getElementById('selectEvenement');
 	selectEvenement.addEventListener('change', chargerEvenements);
 
+    // on recupere le formulaire pour le faire apparaitre
     form=document.getElementById('modification');
-
-
-
-	// au chargement de la page, on vide la div ressources
-	// viderDivRessources();
 }
 
 /* --

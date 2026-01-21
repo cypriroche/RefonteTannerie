@@ -1,11 +1,16 @@
 <?php 
 
+// tableau de données à retourner
 $donnees=array();
 
+// vérification de la présence de l'id_evenement
 if(!isset($_GET["id_evenement"])){
+	//  si pas d'id_evenement on renvoie un message d'erreur
   $donnees["status"]="PAS DE EVENEMENT";
+
 }
 else{
+	// sinon on récupère l'id_evenement
 	$id_evenement=$_GET["id_evenement"];
 
 
@@ -23,7 +28,7 @@ else{
 	}
 	
 	
-	// recherche de de l'événement
+	// recherche de l'événement
 	$requete='SELECT * FROM evenement WHERE id_evenement='.$id_evenement;
 
 	$resultats= $conn -> query($requete);

@@ -57,7 +57,7 @@
       <img src="img/nosServices/banniere.webp" alt="bannière">
   </section>
 
-    <p>
+    <p class="service">
       Des espaces, des accompagnements et des ressources pour soutenir les pratiques musicales,
       quel que soit votre niveau ou votre style.
     </p>
@@ -213,8 +213,8 @@
         </div>
         
         <!-- informations sur les droits d'auteurs -->
-        <div class="droit-d-auteurs">
-            <p>© 2026 La Tannerie - Tous droits réservés</p>
+        <div class="copyright">
+            <p>© 2026 La Tannerie - Tous droits réservés - <a class="mentions-legales" href="mentionsLegales.php">Mentions légales</a></p>
         </div>
     </footer>
 </body>
